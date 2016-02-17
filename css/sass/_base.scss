@@ -1,0 +1,67 @@
+// Media Query Breakpoints
+$mobile : 30em; // 480px
+$moblet : 40em; // 640px
+$tablet : 45em; // 720px
+$tablet-mid : 55.5em; // 888px
+$tablet-landscape : 61.5em; // 984px
+$laptop : 75em; // 1200px
+$desktop : 87em; // 1392px
+$cinema : 105em; // 1680px
+
+// Important numbers
+$line: 24;
+$column: 100% / 18; // 16 plus the page gutters 
+$font-size: 16;
+$em: $font-size * 1;
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+@mixin visually-hidden { border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+}
+
+::selection {
+  background: transparentize(#EBEC33,.6); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: transparentize(#EBEC33,.6); /* Gecko Browsers */
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// grid container, that gives us gutters
+.container { margin: 0 $column/4; @include clearfix;
+  @include breakpoint($tablet-landscape) {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+} 
+// gives elements gutters using padding
+.wrapper { padding: 0 #{($line/2)/$em}em; box-sizing: border-box; float: left; } 

@@ -1,0 +1,89 @@
+$white : #fff;
+$black : #000;
+$darkgrey : lighten(#000, 20%);
+$grey : lighten(#000, 50%);
+$lightgrey : lighten(#000, 92%);
+$offwhite : lighten(#000, 98%);
+
+$green : #3EE590;
+$red : #DC2182;
+$yellow : #EBEC33;
+$purple : #3125EB;
+
+$fb : #3b5998;
+$ig : #315074;
+
+$jubilat : "jubilat";
+$rooney : "rooney-sans";
+$chaparral : "chaparral-pro";
+
+body { color: $black; font-family: $chaparral,sans-serif; font-weight: 300; font-size: $font-size / 16 * 1em; line-height: #{$line / $em}em; text-rendering: optimizeLegibility; overflow-x: hidden; }
+
+p { margin: 0;
+	&+p { margin-top: 1em; }
+}
+.small { font-size: .875em; }
+ul { list-style-type: circle; }
+
+a {
+	&:link, &:visited { color: $darkgrey; }
+	&:hover { color: saturate($darkgrey, 20%); }
+}
+
+header[role="banner"] { position: relative; z-index: 100; }
+
+.social-icons { float: right; text-align: right; margin-top: 3em; }
+.social-icon { @include size(1em); opacity: 1; @include transition(opacity .2s linear);
+	&:hover { opacity: 1; }
+}
+.social-icon-link+.social-icon-link { margin-left: .5em; }
+
+#logo { width: 50%; margin: 1em 0 0;
+	@include breakpoint($moblet) { width: 33.333333333%; }
+	@include breakpoint($tablet) { width: 25%; }
+	img { max-width: 100%; }
+}
+
+.quote { font-style: italic; color: $darkgrey; margin: 0;
+	// border-left: .25em solid $lightgrey; 
+	p:first-letter { margin-left: -.25em; }
+	&_big {
+		p { font-size: 1.75em; line-height: 1.2; }
+	}
+	&-home { width: 100%; margin-bottom: 2em;
+		@include breakpoint($tablet) { width: 43.75%; margin-right: 6.25%; margin-bottom: 0; }
+	}
+}
+
+.home-page-image { width: 100%;
+	@include breakpoint($moblet) { margin-top:-5em; }
+}
+
+.contact-details { width: 100%; margin-top: 0;
+	@include breakpoint($tablet) { width: 43.75%; margin-left: 6.25%; }
+	p { margin-bottom: .5em; }
+}
+
+.button { display: inline-block; text-decoration: none; background-color: $offwhite; border-radius: .25em; padding: .5em 1em; text-transform: uppercase; letter-spacing: .25em; -webkit-font-smoothing: antialiased; font-weight: bold; font-size: .875em; border: .125em solid $lightgrey; border-bottom-width: .25em; @include transition(all .2s linear); position: relative; margin-bottom: 1em;
+	&:link, &:visited { color: $darkgrey; }
+	&:hover { background-color: $green; }
+	&:active { top: 1px; }
+	&+.button { margin-left: 1em; }
+	&_buy {
+		&:link, &:visited { background-color: $offwhite; border-color: mix($offwhite, $grey); }
+		&:hover { background-color: saturate($offwhite, 20%); border-color: saturate(mix($offwhite, $grey), 20%) }
+	}
+	&_social-instagram {
+		&:link, &:visited { background-color: $ig; border-color: mix($ig, $black); }
+		&:hover { background-color: saturate($ig, 20%); border-color: saturate(mix($ig, $black), 20%) }
+	}
+	&_social-facebook {
+		&:link, &:visited { background-color: $fb; border-color: mix($fb, $black); }
+		&:hover { background-color: saturate($fb, 20%); border-color: saturate(mix($fb, $black), 20%) }
+	}
+}
+
+.millies-books { text-align: center; margin: 2em 0; }
+.pad-right { margin-right: 1em; }
+
+footer[role="content-info"] { text-align: center; margin-top: 2em; margin-bottom: 2em; }
