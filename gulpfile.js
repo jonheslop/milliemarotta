@@ -1,9 +1,10 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const nano = require('gulp-cssnano');
-const eslint = require('gulp-eslint');
-const uglify = require('gulp-uglify');
-const concat = require('gulp-concat');
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    nano = require('gulp-cssnano'),
+    eslint = require('gulp-eslint'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
+    livereload = require('gulp-livereload');
 
 // Compile sass, minify css, autoprefix
 gulp.task('styles', function() {
@@ -15,7 +16,8 @@ gulp.task('styles', function() {
       console.log(err.message);
     })
     .pipe(nano())
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./css'))
+    .pipe(livereload());
 });
 
 // Define list of scripts to run trhough scripts task
@@ -48,6 +50,7 @@ gulp.task('styles', function() {
 // Watch assets for changes and lunch relevant task
 gulp.task('watch', function() {
   gulp.watch('css/sass/**/*.scss', ['styles']);
+  livereload.listen();
   // gulp.watch('src/js/**/*.js', ['scripts']);
 });
 
