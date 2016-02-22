@@ -20,38 +20,30 @@ gulp.task('styles', function() {
     .pipe(livereload());
 });
 
-// Define list of scripts to run trhough scripts task
-// const scripts = [
-//   './src/js/gallery.js',
-//   './src/js/faces.js',
-//   './src/js/show.js',
-//   './src/js/tabs.js'
-// ];
-
 // // ESLint
-// gulp.task('eslint', function() {
-//   return gulp.src(scripts)
-//     .pipe(eslint())
-//     .pipe(eslint.format())
-//     .pipe(eslint.failAfterError());
-// });
+gulp.task('eslint', function() {
+  return gulp.src('./js/parts/**/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
 
 // // Minify js files
-// gulp.task('scripts', ['eslint'], function() {
-//   return gulp.src(scripts)
-//     .pipe(concat('app.min.js'))
-//     .pipe(uglify())
-//     .on('error', function(err) {
-//       console.log(err.message);
-//     })
-//     .pipe(gulp.dest('./dist/js'));
-// });
+gulp.task('scripts', ['eslint'], function() {
+  return gulp.src('./js/parts/**/*.js')
+    .pipe(concat('site.min.js'))
+    .pipe(uglify())
+    .on('error', function(err) {
+      console.log(err.message);
+    })
+    .pipe(gulp.dest('./js'));
+});
 
 // Watch assets for changes and lunch relevant task
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('css/sass/**/*.scss', ['styles']);
-  // gulp.watch('src/js/**/*.js', ['scripts']);
+  gulp.watch('js/**/*.js', ['scripts']);
 
   // Watch HTML and livereload
   gulp.watch('*.{html,php}')
