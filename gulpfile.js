@@ -36,7 +36,8 @@ gulp.task('scripts', ['eslint'], function() {
     .on('error', function(err) {
       console.log(err.message);
     })
-    .pipe(gulp.dest('./js'));
+    .pipe(gulp.dest('./js'))
+    .pipe(livereload());
 });
 
 // Watch assets for changes and lunch relevant task
