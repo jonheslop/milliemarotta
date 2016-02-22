@@ -49,9 +49,16 @@ gulp.task('styles', function() {
 
 // Watch assets for changes and lunch relevant task
 gulp.task('watch', function() {
-  gulp.watch('css/sass/**/*.scss', ['styles']);
   livereload.listen();
+  gulp.watch('css/sass/**/*.scss', ['styles']);
   // gulp.watch('src/js/**/*.js', ['scripts']);
+
+  // Watch HTML and livereload
+  gulp.watch('*.{html,php}')
+  .on('change', function(file) {
+    gulp.src(file.path)
+    .pipe(livereload());
+  });
 });
 
 // default task
