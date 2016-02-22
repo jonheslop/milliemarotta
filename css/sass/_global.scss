@@ -32,7 +32,7 @@ a {
 
 header[role="banner"] { position: relative; z-index: 100; }
 
-section[role="main"].with-peacock { margin-top: 12em; position: relative; z-index: 100;  }
+section[role="main"].with-peacock { margin-top: 12em; position: relative; z-index: 100; }
 
 .social-icons { float: right; text-align: right; margin-top: 3em; }
 .social-icon { @include size(1em); opacity: 1; @include transition(opacity .2s linear);
@@ -46,14 +46,18 @@ section[role="main"].with-peacock { margin-top: 12em; position: relative; z-inde
 	img { max-width: 100%; }
 }
 
-.quote { font-style: italic; color: $darkgrey; margin: 0;
-	// border-left: .25em solid $lightgrey; 
-	p:first-letter { margin-left: -.25em; }
+.byline { width: 100%; text-align: center; margin: 2em 0;
+	h1, h2 { color: $darkgrey; margin: 0; font-weight: normal; }
+}
+
+.quote { font-style: italic; color: $grey; margin: 0;
+	// border-left: .125em solid $lightgrey; 
+	// p:first-letter { margin-left: -.25em; }
 	&_big {
-		p { font-size: 1.75em; line-height: 1.2; }
+		p { font-size: 1.5em; line-height: 1.2; }
 	}
 	&-home { width: 100%; margin-bottom: 2em;
-		@include breakpoint($tablet) { width: 43.75%; margin-right: 6.25%; margin-bottom: 0; }
+		@include breakpoint($tablet) { width: 37.5%; margin: 0 6.25%; }
 	}
 }
 
@@ -68,7 +72,7 @@ section[role="main"].with-peacock { margin-top: 12em; position: relative; z-inde
 }
 
 .contact-details { width: 100%; margin-top: 0;
-	@include breakpoint($tablet) { width: 43.75%; margin-left: 6.25%; }
+	@include breakpoint($tablet) { width: 50%;}
 	p { margin-bottom: .5em; }
 }
 
