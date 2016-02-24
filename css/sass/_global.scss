@@ -25,6 +25,8 @@ p { margin: 0;
 .small { font-size: .875em; }
 ul { list-style-type: circle; }
 
+p, li { font-size: .875em; line-height: 1.5; }
+
 a {
 	&:link, &:visited { color: $darkgrey; }
 	&:hover { color: saturate($darkgrey, 20%); }
@@ -48,13 +50,14 @@ section[role="main"].with-peacock { margin-top: 12em; position: relative; z-inde
 
 .byline { width: 100%; text-align: center; margin: 2em 0;
 	h1, h2 { color: $darkgrey; margin: 0; font-weight: normal; }
+	h1 { font-size: 1.5em; }
 }
 
 .quote { font-style: italic; color: $grey; margin: 0;
 	// border-left: .125em solid $lightgrey; 
 	// p:first-letter { margin-left: -.25em; }
 	&_big {
-		p { font-size: 1.5em; line-height: 1.2; }
+		p { font-size: 1.125em; line-height: 1.2; }
 	}
 	&-home { width: 100%; margin-bottom: 2em;
 		@include breakpoint($tablet) { width: 37.5%; margin: 0 6.25%; }
@@ -67,7 +70,7 @@ section[role="main"].with-peacock { margin-top: 12em; position: relative; z-inde
 		@include breakpoint($moblet) { margin-top:-6em; }
 	}
 	&.colours {
-		@include breakpoint($moblet) { width: 75%; margin-left: 12.5%; margin-right: 12.5%; }
+		@include breakpoint($moblet) { width: 62.5%; margin-left: 18.75%; margin-right: 18.75%; }
 	}
 }
 
