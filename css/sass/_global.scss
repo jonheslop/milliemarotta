@@ -43,8 +43,8 @@ section[role="main"].with-peacock { margin-top: 12em; position: relative; z-inde
 .social-icon-link+.social-icon-link { margin-left: .5em; }
 
 #logo { width: 50%; margin: 1em 0 0;
-	@include breakpoint($moblet) { width: 33.333333333%; }
-	@include breakpoint($tablet) { width: 25%; }
+	@include breakpoint($moblet) { width: 25%; }
+	@include breakpoint($tablet) { width: 20%; }
 	img { max-width: 100%; }
 }
 
