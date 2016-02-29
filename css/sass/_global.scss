@@ -25,7 +25,7 @@ p { margin: 0;
 .small { font-size: .875em; }
 ul { list-style-type: circle; }
 
-p, li { font-size: .875em; line-height: 1.5; }
+// p, li { font-size: .875em; line-height: 1.5; }
 
 a {
 	&:link, &:visited { color: $darkgrey; }
@@ -34,7 +34,7 @@ a {
 
 header[role="banner"] { position: relative; z-index: 100; }
 
-section[role="main"].with-peacock { margin-top: 12em; position: relative; z-index: 100; }
+// section[role="main"].with-peacock { margin-top: 12em; position: relative; z-index: 100; }
 
 .social-icons { float: right; text-align: right; margin-top: 3em; }
 .social-icon { @include size(1em); opacity: 1; @include transition(opacity .2s linear);
@@ -57,7 +57,7 @@ section[role="main"].with-peacock { margin-top: 12em; position: relative; z-inde
 	// border-left: .125em solid $lightgrey; 
 	// p:first-letter { margin-left: -.25em; }
 	&_big {
-		p { font-size: 1.125em; line-height: 1.2; }
+		p { font-size: 1.25em; line-height: 1.2; }
 	}
 	&-home { width: 100%; margin-bottom: 2em;
 		@include breakpoint($tablet) { width: 37.5%; margin: 0 6.25%; }
@@ -65,7 +65,7 @@ section[role="main"].with-peacock { margin-top: 12em; position: relative; z-inde
 }
 
 .home-page-image { width: 100%;
-	@include breakpoint($moblet) { margin-top: -5em; }
+	@include breakpoint($moblet) { margin-top: -2em; }
 	&.peacock { position: absolute; right: 0; z-index: 0; opacity: .25;
 		@include breakpoint($moblet) { margin-top:-6em; }
 	}
