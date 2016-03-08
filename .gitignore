@@ -116,3 +116,6 @@ wp-content/mysql.sql
 *.asf
 *.wmv
 *.avi
+
+# Keep the splash page
+index.html
