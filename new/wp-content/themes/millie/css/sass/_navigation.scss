@@ -1,0 +1,21 @@
+#menu { margin-top: 3em; float: left;
+	ul { margin: 0; padding: 0; }
+	li { display: inline-block;
+		&+li { margin-left: .375em; }
+		&:after { content: "\2022"; margin-left: .375em; position: relative; top: 1px; }
+		&:last-of-type:after { display: none; }
+		a {
+			&:link, &:visited {
+				text-decoration: none;
+				font-weight: bold;
+				text-transform: lowercase;
+				font-variant: small-caps;
+				letter-spacing: .0625em;
+				border-bottom: 1px solid $lightgrey;
+			}
+			&:hover {
+				border-bottom: 1px solid $grey;
+			}
+		}
+	}
+}

@@ -65,3 +65,31 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+
+	add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
+
+	function starkers_script_enqueuer() {
+		wp_register_script( 'site', get_template_directory_uri().'/js/site.min.js?v=846531254542', array( 'jquery', ), '', false, true );
+		wp_enqueue_script( 'site' );
+
+		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css?v=846531254542', '', '', 'screen' );
+		wp_enqueue_style( 'screen' );
+	}
+
+	// Add featured images to posts and pages
+	add_theme_support( 'post-thumbnails', array('post') );
+	set_post_thumbnail_size( 80, 80, true ); // default Post Thumbnail dimensions (cropped)
+	if ( function_exists( 'add_image_size' ) ) { 
+		add_image_size('grande', 768, 9999);
+		add_image_size('small', 512, 9999);
+		add_image_size('smaller', 256, 9999);
+		add_image_size('smaller-crop', 256, 256, true);
+		add_image_size('compact', 128, 9999);
+	}
+
+    function new_excerpt_more($more) {
+    	return '&hellip;';
+    }
+    add_filter('excerpt_more', 'new_excerpt_more');
+
+	// require_once('post_types/ride.php');
