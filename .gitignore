@@ -3,7 +3,11 @@
 *[Tt]humbs.db
 *.Trashes
 
-# Jon Heslop / Rapha stuff
+# Keep the splash page
+/index.html
+index.html
+
+# Jon Heslop stuff
 *.sublime-project
 *.sublime-workspace
 *.sass-cache
@@ -116,7 +120,3 @@ wp-content/mysql.sql
 *.asf
 *.wmv
 *.avi
-
-# Keep the splash page
-/index.html
-index.html
