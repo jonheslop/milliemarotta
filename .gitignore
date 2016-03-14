@@ -3,10 +3,6 @@
 *[Tt]humbs.db
 *.Trashes
 
-# Keep the splash page
-/index.html
-index.html
-
 # Jon Heslop stuff
 *.sublime-project
 *.sublime-workspace
