@@ -118,4 +118,5 @@ wp-content/mysql.sql
 *.avi
 
 # Keep the splash page
+/index.html
 index.html
