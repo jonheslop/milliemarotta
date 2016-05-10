@@ -92,4 +92,4 @@ return $count;
     }
     add_filter('excerpt_more', 'new_excerpt_more');
 
-	// require_once('post_types/ride.php');
+  require_once('post_types/work.php');

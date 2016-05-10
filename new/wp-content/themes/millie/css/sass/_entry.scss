@@ -1,0 +1,15 @@
+.entry-content {
+  width: 100%;
+  text-align: center;
+  &:after {
+    content: '';
+    display: block;
+    border-top: 1px solid $lightgrey;
+    width: 50%;
+    margin: 1.5em 25% .75em;
+  }
+  @include breakpoint($tablet) {
+    width: 62.5%;
+    margin: 0 18.75%;
+  }
+}

@@ -42,4 +42,3 @@
             ) ); ?>
 		</nav>
 	</header>
-    <section role="main" class="container cf">

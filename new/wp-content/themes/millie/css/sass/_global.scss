@@ -15,7 +15,7 @@ a {
 
 header[role="banner"] { position: relative; z-index: 100; }
 
-// section[role="main"].with-peacock { margin-top: 12em; position: relative; z-index: 100; }
+// section[role="main"] { margin-left: .75em; margin-right: .75em; }
 
 .social-icons { float: right; text-align: right; margin-top: 3em; }
 .social-icon { @include size(1em); opacity: 1; @include transition(opacity .2s linear);
@@ -23,7 +23,7 @@ header[role="banner"] { position: relative; z-index: 100; }
 }
 .social-icon-link+.social-icon-link { margin-left: .5em; }
 
-#logo { width: 50%; margin: 1em 0 0;
+#logo { width: 50%; margin: 1em .75em 0 0; padding: 0 .75rem;
 	@include breakpoint($moblet) { width: 25%; }
 	@include breakpoint($tablet) { width: 20%; }
 	img { max-width: 100%; }
