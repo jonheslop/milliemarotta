@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section id="content" role="main" class="container">
+<section id="content" role="main" class="container content-container">
 <header class="header">
 <?php the_post(); ?>
 <h1 class="entry-title author"><?php _e( 'Author Archives', 'blankslate' ); ?>: <?php the_author_link(); ?></h1>

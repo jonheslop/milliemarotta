@@ -1,17 +1,17 @@
 <?
 /* https://generatewp.com/post-type/ */
 // Register Custom Post Type
-function register_work_post_type() {
+function register_submission_post_type() {
 
   $labels = array(
-    'name'                  => _x( 'Work', 'Post Type General Name', 'text_domain' ),
-    'singular_name'         => _x( 'Work', 'Post Type Singular Name', 'text_domain' ),
-    'menu_name'             => __( 'Work', 'text_domain' ),
-    'name_admin_bar'        => __( 'Work Post Type', 'text_domain' ),
-    'archives'              => __( 'Work Archives', 'text_domain' ),
+    'name'                  => _x( 'Submission', 'Post Type General Name', 'text_domain' ),
+    'singular_name'         => _x( 'Submission', 'Post Type Singular Name', 'text_domain' ),
+    'menu_name'             => __( 'Submission', 'text_domain' ),
+    'name_admin_bar'        => __( 'Submission Post Type', 'text_domain' ),
+    'archives'              => __( 'Submission Archives', 'text_domain' ),
     'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-    'all_items'             => __( 'All work', 'text_domain' ),
-    'add_new_item'          => __( 'Add New work', 'text_domain' ),
+    'all_items'             => __( 'All submissions', 'text_domain' ),
+    'add_new_item'          => __( 'Add New submission', 'text_domain' ),
     'add_new'               => __( 'Add New', 'text_domain' ),
     'new_item'              => __( 'New Item', 'text_domain' ),
     'edit_item'             => __( 'Edit Item', 'text_domain' ),
@@ -31,13 +31,13 @@ function register_work_post_type() {
     'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
   );
   $args = array(
-    'label'                 => __( 'Work', 'text_domain' ),
-    'description'           => __( 'Millie’s work', 'text_domain' ),
+    'label'                 => __( 'Submission', 'text_domain' ),
+    'description'           => __( 'Colouring submissions', 'text_domain' ),
     'labels'                => $labels,
-    'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', ),
-    'taxonomies'            => array( 'category', 'post_tag' ),
+    'supports'              => array( 'title', 'editor',),
+    'taxonomies'            => array( 'post_tag' ),
     'hierarchical'          => false,
-    'rewrite' => array('slug' => 'work', 'with_front' => true),
+    'rewrite' => array('slug' => 'colouring-gallery', 'with_front' => true),
     'public'                => true,
     'show_ui'               => true,
     'show_in_menu'          => true,
@@ -50,7 +50,7 @@ function register_work_post_type() {
     'publicly_queryable'    => true,
     'capability_type'       => 'page',
   );
-  register_post_type( 'millie_work', $args );
+  register_post_type( 'colouring_submission', $args );
 
 }
-add_action( 'init', 'register_work_post_type', 0 );
+add_action( 'init', 'register_submission_post_type', 0 );

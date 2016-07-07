@@ -15,9 +15,9 @@ a {
 
 header[role="banner"] { position: relative; z-index: 100; }
 
-// section[role="main"] { margin-left: .75em; margin-right: .75em; }
+.content-container { margin-top: 1.5em; }
 
-.social-icons { float: right; text-align: right; margin-top: 3em; }
+.social-icons { float: left; width: 100%; text-align: center; margin: 1.5em 0; }
 .social-icon { @include size(1em); opacity: 1; @include transition(opacity .2s linear);
 	&:hover { opacity: 1; }
 }
@@ -82,4 +82,4 @@ header[role="banner"] { position: relative; z-index: 100; }
 .millies-books { text-align: center; margin: 2em 0; }
 .pad-right { margin-right: 1em; }
 
-footer[role="content-info"] { text-align: center; margin-top: 2em; margin-bottom: 2em; }
+footer[role="content-info"] { text-align: center; margin-top: 2em; margin-bottom: 2em; color: $grey; }

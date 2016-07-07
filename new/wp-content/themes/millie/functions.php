@@ -81,7 +81,8 @@ return $count;
 	set_post_thumbnail_size( 80, 80, true ); // default Post Thumbnail dimensions (cropped)
 	if ( function_exists( 'add_image_size' ) ) { 
 		add_image_size('grande', 768, 9999);
-		add_image_size('small', 512, 9999);
+    add_image_size('small', 512, 9999);
+    add_image_size('small-crop', 512, 512, true);
 		add_image_size('smaller', 256, 9999);
 		add_image_size('smaller-crop', 256, 256, true);
 		add_image_size('compact', 128, 9999);
@@ -93,3 +94,18 @@ return $count;
     add_filter('excerpt_more', 'new_excerpt_more');
 
   require_once('post_types/work.php');
+  require_once('post_types/colouring_submission.php');
+
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'nav_menu_item', 'millie_work'
+    ));
+    return $query;
+  }
+}
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+
+@ini_set( 'upload_max_size' , '5M' );
+@ini_set( 'post_max_size', '5M');
+@ini_set( 'max_execution_time', '300' );

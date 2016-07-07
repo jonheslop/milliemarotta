@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section id="content" role="main" class="container">
+<section id="content" role="main" class="container content-container">
 <article id="post-0" class="post not-found">
 <header class="header">
 <h1 class="entry-title"><?php _e( 'Not Found', 'blankslate' ); ?></h1>

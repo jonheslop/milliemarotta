@@ -1,0 +1,9 @@
+.work-grid-item {
+  margin-bottom: 1.5em;
+  text-align: center;
+  width: 50%;
+
+  @include breakpoint($tablet) {
+    width: 25%;
+  }
+}
