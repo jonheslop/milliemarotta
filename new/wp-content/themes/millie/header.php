@@ -9,7 +9,7 @@
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<?php wp_head(); ?>
 
-    <? if (is_single(468)) : ?>
+    <? if (is_page(468)) : ?>
     <?php wp_redirect( 'http://milliemarotta.co.uk/creaturecuriosities', 301 ); exit; ?>
     <? endif; ?>
 
