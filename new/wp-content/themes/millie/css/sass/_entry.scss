@@ -8,11 +8,11 @@
   text-align: center;
   text-transform: lowercase;
   a {
-    // background-color: transparentize($lightgrey, .5);
+    background-color: transparentize($lightgrey, .5);
     display: block;
     padding: .125em .375em 0;
     text-decoration: none;
-    text-shadow: 1px 1px 1px $offwhite, -1px -1px 1px $offwhite, 1px -1px 1px $offwhite, -1px 1px 1px $offwhite;
+    // text-shadow: 1px 1px 1px $offwhite, -1px -1px 1px $offwhite, 1px -1px 1px $offwhite, -1px 1px 1px $offwhite;
   }
 }
 
