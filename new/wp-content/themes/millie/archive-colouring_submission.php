@@ -22,7 +22,7 @@ elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'blankslate' ), get_th
     <?php $index++; ?>
   <?php endforeach; ?>
 </p>
-<p class="colouring-submit"><em><a href="<?php echo get_the_permalink(27); ?>">Submit your colouring here</a></em></p>
+<p class="colouring-submit"><a class="button button_buy" href="<?php echo get_permalink(27); ?>">Submit your colouring here</a></p>
 </header>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'grid' ); ?>
