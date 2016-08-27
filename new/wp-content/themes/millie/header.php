@@ -8,6 +8,11 @@
 		<script src="https://use.typekit.net/dlu1riv.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<?php wp_head(); ?>
+
+    <? if (is_single(468)) : ?>
+    <?php wp_redirect( 'http://milliemarotta.co.uk/creaturecuriosities', 301 ); exit; ?>
+    <? endif; ?>
+
 	</head>
 	<body <?php body_class(); ?>>
 		<!--[if lt IE 8]>

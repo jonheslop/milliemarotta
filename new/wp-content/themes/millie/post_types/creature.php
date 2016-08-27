@@ -37,7 +37,7 @@ function custom_post_type() {
     'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
     'taxonomies'            => array( 'post_tag' ),
     'hierarchical'          => false,
-    'rewrite' => array('slug' => 'creaturecuriosities', 'with_front' => true),
+    'rewrite' => array('slug' => 'creature-curiosities', 'with_front' => true),
     'public'                => true,
     'show_ui'               => true,
     'show_in_menu'          => true,
