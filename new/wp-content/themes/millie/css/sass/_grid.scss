@@ -16,9 +16,9 @@
 
 .work-grid-item-title-wrap {
   @include transition(all .1s linear);
-  left: .75em;
+  left: 0;
   position: absolute;
-  right: .75em;
+  right: 0;
   top: 50%;
 
 }
