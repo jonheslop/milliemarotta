@@ -7,6 +7,7 @@ elseif ( is_month() ) { printf( __( 'Monthly Archives: %s', 'blankslate' ), get_
 elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'blankslate' ), get_the_time( 'Y' ) ); }
 else { _e( 'Colouring Gallery', 'blankslate' ); }
 ?></h1>
+<p class="colouring-submit"><em><a href="<?php get_permalink(27); ?>">Submit your colouring here</a></em></p>
 </header>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'grid' ); ?>
