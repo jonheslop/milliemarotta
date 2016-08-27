@@ -4,14 +4,14 @@
 function custom_post_type() {
 
   $labels = array(
-    'name'                  => _x( 'Creatures', 'Post Type General Name', 'text_domain' ),
-    'singular_name'         => _x( 'Creature', 'Post Type Singular Name', 'text_domain' ),
+    'name'                  => _x( 'Creature Curiosities', 'Post Type General Name', 'text_domain' ),
+    'singular_name'         => _x( 'Creature Curiosity', 'Post Type Singular Name', 'text_domain' ),
     'menu_name'             => __( 'Creatures', 'text_domain' ),
     'name_admin_bar'        => __( 'Creatures', 'text_domain' ),
     'archives'              => __( 'Item Archives', 'text_domain' ),
     'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-    'all_items'             => __( 'All Creatures', 'text_domain' ),
-    'add_new_item'          => __( 'Add New Creature', 'text_domain' ),
+    'all_items'             => __( 'All Creature Curiosities', 'text_domain' ),
+    'add_new_item'          => __( 'Add New Creature Curiosity', 'text_domain' ),
     'add_new'               => __( 'Add New', 'text_domain' ),
     'new_item'              => __( 'New Creature', 'text_domain' ),
     'edit_item'             => __( 'Edit Creature', 'text_domain' ),
@@ -31,8 +31,8 @@ function custom_post_type() {
     'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
   );
   $args = array(
-    'label'                 => __( 'Creature', 'text_domain' ),
-    'description'           => __( 'Curious creature information', 'text_domain' ),
+    'label'                 => __( 'Creature Curiosities', 'text_domain' ),
+    'description'           => __( 'Creature curiosity information', 'text_domain' ),
     'labels'                => $labels,
     'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
     'taxonomies'            => array( 'post_tag' ),
