@@ -37,7 +37,7 @@ function register_submission_post_type() {
     'supports'              => array( 'title', 'editor',),
     'taxonomies'            => array( 'colouring_book', 'post_tag' ),
     'hierarchical'          => false,
-    'rewrite' => array('slug' => 'colouring-gallery', 'with_front' => true),
+    'rewrite' => array('slug' => 'colouring-galleries', 'with_front' => true),
     'public'                => true,
     'show_ui'               => true,
     'show_in_menu'          => true,
