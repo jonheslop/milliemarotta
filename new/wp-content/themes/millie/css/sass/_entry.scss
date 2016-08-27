@@ -7,14 +7,15 @@
   margin: 0;
   text-align: center;
   text-transform: lowercase;
-  a {
+}
+
+  .entry-link {
     background-color: transparentize($white, .5);
     display: block;
     padding: .1875em .375em .125em;
     text-decoration: none;
     // text-shadow: 1px 1px 1px $offwhite, -1px -1px 1px $offwhite, 1px -1px 1px $offwhite, -1px 1px 1px $offwhite;
   }
-}
 
 .entry-categories {
   font-style: italic;
