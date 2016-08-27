@@ -1,7 +1,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('wrapper work-grid-item'); ?>>
   <figure>
     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-      <?php if ( has_post_thumbnail() ) {
+      <?php if ( has_post_thumbnail() && get_post_type() == 'millie_creature' ) {
+        the_post_thumbnail('smaller-crop');
+      } elseif ( has_post_thumbnail() && get_post_type() == 'colouring_submission' ) {
         the_post_thumbnail('small-crop');
       } elseif ( get_post_type() == 'colouring_submission' ) {
         $image = get_field('image');
