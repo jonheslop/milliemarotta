@@ -9,7 +9,7 @@
     'post_type' => array('millie_creature'),
     'posts_per_page' => -1,
   );
-  $allWork = new WP_Query( $creatureArgs ); ?>
+  $creature = new WP_Query( $creatureArgs ); ?>
 <?php if ( $creature->have_posts() ) : while ( $creature->have_posts() ) : $creature->the_post(); ?>
 <?php get_template_part( 'grid' ); ?>
 <?php endwhile; endif; ?>
