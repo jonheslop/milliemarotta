@@ -23,7 +23,7 @@
     ),
     'fields' => array(13,14,15,251),
     'submit_value' => __('Submit', 'acf'),
-
+    'updated_message' => __('Thanks! Your submission will be reviewe, please come back later to see it in the gallery.', 'acf')
   ));
   
   ?>

@@ -76,3 +76,11 @@
     margin-top: -.75em;
   }
 }
+
+#message {
+  text-align: center;
+
+  &.updated {
+    color: $green;
+  }
+}
