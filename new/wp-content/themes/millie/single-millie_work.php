@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 <section id="content" role="main" class="container content-container">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-  $current_post = get_the_ID();
+  $current_post_id = get_the_ID();
+  $current_post_category = get_the_category();
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?>>
     <header class="wrapper work-header">
@@ -31,7 +32,8 @@
 <?php $allWorkArgs = array(
     'post_type' => array('millie_work'),
     'posts_per_page' => -1,
-    'post__not_in' => array($current_post)
+    'post__not_in' => array($current_post_id),
+    'category__in' => array($current_post_category[0]->term_id)
   );
   $allWork = new WP_Query( $allWorkArgs ); 
   if ( $allWork->have_posts() ) : ?>
