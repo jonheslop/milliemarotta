@@ -4,15 +4,15 @@
 function register_submission_post_type() {
 
   $labels = array(
-    'name'                  => _x( 'Submission', 'Post Type General Name', 'text_domain' ),
+    'name'                  => _x( 'Submissions', 'Post Type General Name', 'text_domain' ),
     'singular_name'         => _x( 'Submission', 'Post Type Singular Name', 'text_domain' ),
-    'menu_name'             => __( 'Submission', 'text_domain' ),
+    'menu_name'             => __( 'Submissions', 'text_domain' ),
     'name_admin_bar'        => __( 'Submission Post Type', 'text_domain' ),
     'archives'              => __( 'Submission Archives', 'text_domain' ),
     'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-    'all_items'             => __( 'All submissions', 'text_domain' ),
-    'add_new_item'          => __( 'Add New submission', 'text_domain' ),
-    'add_new'               => __( 'Add New', 'text_domain' ),
+    'all_items'             => __( 'All colouring submissions', 'text_domain' ),
+    'add_new_item'          => __( 'Add new colouring', 'text_domain' ),
+    'add_new'               => __( 'Add new colouring', 'text_domain' ),
     'new_item'              => __( 'New Item', 'text_domain' ),
     'edit_item'             => __( 'Edit Item', 'text_domain' ),
     'update_item'           => __( 'Update Item', 'text_domain' ),
@@ -31,7 +31,7 @@ function register_submission_post_type() {
     'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
   );
   $args = array(
-    'label'                 => __( 'Submission', 'text_domain' ),
+    'label'                 => __( 'Submissions', 'text_domain' ),
     'description'           => __( 'Colouring submissions', 'text_domain' ),
     'labels'                => $labels,
     'supports'              => array( 'title', 'editor',),
