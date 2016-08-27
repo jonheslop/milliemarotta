@@ -17,6 +17,9 @@
       <? if ( get_post_type() == 'colouring_submission' ) : ?>
         <p class="entry-categories">by <?php the_field('name'); ?></p>
       <? endif; ?>
+      <? if ( get_post_type() == 'millie_creature' ) : ?>
+        <p class="scientific_name"><em><? the_field('scientific_name'); ?></em></p>
+      <? endif; ?>
         </a>
       </header>
     </figcaption>

@@ -1,0 +1,19 @@
+.creature-crop {
+  width: 50%;
+
+  @include breakpoint($tablet-landscape) {
+    margin-bottom: 1.5em;
+    width: 37.5%;
+  }
+  img {
+    border: 1px solid $grey;
+  }
+}
+
+.type-millie_creature .entry-content p {
+  text-align: left;
+}
+
+.scientific_name {
+  text-align: center;
+}

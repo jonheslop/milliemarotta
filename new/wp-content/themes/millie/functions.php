@@ -94,6 +94,7 @@ return $count;
     add_filter('excerpt_more', 'new_excerpt_more');
 
   require_once('post_types/work.php');
+  require_once('post_types/creature.php');
   require_once('post_types/colouring_submission.php');
 
 function namespace_add_custom_types( $query ) {
