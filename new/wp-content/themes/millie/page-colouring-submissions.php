@@ -21,7 +21,7 @@
       'post_type' => 'colouring_submission',
       'post_status' => 'pending'
     ),
-    'fields' => array(13,14,15),
+    'fields' => array(13,14,15,16),
     'submit_value' => __('Submit', 'acf'),
 
   ));
