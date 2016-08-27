@@ -34,7 +34,7 @@ function custom_post_type() {
     'label'                 => __( 'Creature', 'text_domain' ),
     'description'           => __( 'Curious creature information', 'text_domain' ),
     'labels'                => $labels,
-    'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields' ),
+    'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
     'taxonomies'            => array( 'post_tag' ),
     'hierarchical'          => false,
     'rewrite' => array('slug' => 'creatures', 'with_front' => true),
