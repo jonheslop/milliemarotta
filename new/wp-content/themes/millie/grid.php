@@ -12,7 +12,7 @@
     </a>
     <figcaption class="work-grid-item-title-wrap">
       <header>
-      <?php if ( is_singular() ) { echo '<h1 class="entry-title">'; } else { echo '<h2 class="entry-title">'; } ?><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a><?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>
+      <?php if ( is_singular() ) { echo '<h1 class="entry-title">'; } else { echo '<h2 class="entry-title">'; } ?><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php echo widont(get_the_title()); ?></a><?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>
       <? if ( get_post_type() == 'colouring_submission' ) : ?>
         <p class="entry-categories">by <?php the_field('name'); ?></p>
       <? endif; ?>

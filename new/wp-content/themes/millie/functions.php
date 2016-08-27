@@ -132,3 +132,9 @@ function custom_front_page($wp_query){
     endif;
 
 }
+
+// Widont
+function widont($str = '')
+{
+  return preg_replace( '|([^\s])\s+([^\s]+)\s*$|', '$1&nbsp;$2', $str);
+}
