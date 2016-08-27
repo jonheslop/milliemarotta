@@ -1,9 +1,33 @@
 .work-grid-item {
   margin-bottom: 1.5em;
+  position: relative;
   text-align: center;
   width: 50%;
 
   @include breakpoint($tablet) {
     width: 25%;
+
+    &:hover .work-grid-item-title-wrap {
+      @include transform(translateY(-50%));
+      opacity: 1;
+    }
   }
+}
+
+.work-grid-item-title-wrap {
+  @include transition(all .1s linear);
+  left: .75em;
+  position: absolute;
+  right: .75em;
+  top: 50%;
+
+}
+
+.no-touch .work-grid-item-title-wrap {
+  opacity: 0;
+}
+
+.touch .work-grid-item-title-wrap {
+  opacity: 1;
+  @include transform(translateY(-50%));
 }

@@ -17,7 +17,7 @@ figure {
 }
 figure img, figure object, figure embed, figure video {
     max-width: 100%;
-    display: block;
+    display: inline-block;
     height: auto;
     @include old-ie { width: 100%; }
 }

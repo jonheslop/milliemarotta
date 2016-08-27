@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 <section id="content" role="main" class="container content-container">
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+  $current_post = get_the_ID();
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?>>
     <header class="wrapper work-header">
       <h1 class="entry-title">
@@ -24,8 +26,27 @@
 </article>
 <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 <?php endwhile; endif; ?>
+
+<section class="cf all-work">
+  <header class="header">
+    <h1 class="entry-title">More Work</h1>
+  </header>
+<?php $allWorkArgs = array(
+    'post_type' => array('millie_work'),
+    'posts_per_page' => -1,
+    'exclude' => $current_post
+  );
+  $allWork = new WP_Query( $allWorkArgs ); 
+  if ( $allWork->have_posts() ) : ?>
+      <section class="browse_survey" id="goMasonry">
+      <?php while ( $allWork->have_posts() ) : $allWork->the_post(); ?>
+        <?php get_template_part( 'grid' ); ?>
+  <?php endwhile; endif; ?>
+
+</section>
+
 <footer class="footer">
-<?php get_template_part( 'nav', 'below-single' ); ?>
+<!-- <?php get_template_part( 'nav', 'below-single' ); ?> -->
 </footer>
 </section>
 <?php get_footer(); ?>
