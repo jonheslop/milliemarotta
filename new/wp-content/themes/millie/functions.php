@@ -146,6 +146,7 @@ function eg_add_rewrite_rules() {
     global $wp_rewrite;
     $new_rules = array(
         'CreatureCuriosities' => 'creaturecuriosities',
+        'new/CreatureCuriosities' => 'new/creaturecuriosities',
     );
     $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
 }
