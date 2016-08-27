@@ -9,7 +9,14 @@ else { _e( 'Archives', 'blankslate' ); }
 ?></h1>
 </header>
  -->
- <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if ( get_post_type() == 'millie_creature' ) : ?>
+  <header class="header all-work-header">
+    <h1 class="entry-title">
+      Creature Curiosities
+    </h1>
+  </header>
+<?php endif; ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'grid' ); ?>
 <?php endwhile; endif; ?>
 <?php get_template_part( 'nav', 'below' ); ?>
