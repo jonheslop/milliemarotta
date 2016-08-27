@@ -28,6 +28,9 @@
 <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 <?php endwhile; endif; ?>
 
+<?php print_r($current_post_category); ?>
+<?php echo '<h1>' . $current_post_category[0]->term_id . '</h1>'; ?>
+
 <section class="cf all-work">
 <?php $allWorkArgs = array(
     'post_type' => array('millie_work'),
@@ -38,7 +41,7 @@
   $allWork = new WP_Query( $allWorkArgs ); 
   if ( $allWork->have_posts() ) : ?>
     <header class="header all-work-header">
-      <h1 class="entry-title">More Work</h1>
+      <h1 class="entry-title">More <?php echo $current_post_category[0]->name; ?></h1>
     </header>
       <?php while ( $allWork->have_posts() ) : $allWork->the_post(); ?>
         <?php get_template_part( 'grid' ); ?>
