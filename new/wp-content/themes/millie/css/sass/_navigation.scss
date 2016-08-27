@@ -22,12 +22,12 @@
 			}
 		}
 	}
-}
 
-.current-menu-item {
-    a {
-      &:link, &:visited {
-        border-bottom: 1px solid $grey;
+  .current-menu-item {
+      a {
+        &:link, &:visited {
+          border-bottom: 1px solid $grey;
+        }
       }
-    }
+  }
 }
