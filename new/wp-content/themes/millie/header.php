@@ -8,8 +8,6 @@
 		<script src="https://use.typekit.net/dlu1riv.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<?php wp_head(); ?>
-
-
 	</head>
 	<body <?php body_class(); ?>>
 		<!--[if lt IE 8]>
