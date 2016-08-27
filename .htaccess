@@ -1,4 +1,0 @@
-RewriteEngine on
-RewriteBase /
-RewriteMap insensitive tolower:
-RewriteRule ^[\/]*(.*)$ /${insensitive:$1} [R,L]
