@@ -7,10 +7,6 @@
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/modernizr-2.8.3.min.js"></script>
 		<script src="https://use.typekit.net/dlu1riv.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <? if (is_page(468)) : ?>
-    <?php wp_redirect( 'http://milliemarotta.co.uk/creature-curiosities', 301 ); exit; ?>
-    <? endif; ?>
-
 		<?php wp_head(); ?>
 
 
