@@ -28,17 +28,16 @@
 <?php endwhile; endif; ?>
 
 <section class="cf all-work">
-  <header class="header">
-    <h1 class="entry-title">More Work</h1>
-  </header>
 <?php $allWorkArgs = array(
     'post_type' => array('millie_work'),
     'posts_per_page' => -1,
-    'exclude' => $current_post
+    'post__not_in' => array($current_post)
   );
   $allWork = new WP_Query( $allWorkArgs ); 
   if ( $allWork->have_posts() ) : ?>
-      <section class="browse_survey" id="goMasonry">
+    <header class="header all-work-header">
+      <h1 class="entry-title">More Work</h1>
+    </header>
       <?php while ( $allWork->have_posts() ) : $allWork->the_post(); ?>
         <?php get_template_part( 'grid' ); ?>
   <?php endwhile; endif; ?>
