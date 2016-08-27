@@ -64,4 +64,15 @@
   }
 }
 
-.colouring-submit { text-align: center; }
+.colouring-submit {
+  margin-top: .75em;
+  width: 100%;
+}
+.colouring_button {
+  float: right;
+  margin-top: .75em;
+  
+  @include breakpoint($tablet-landscape) {
+    margin-top: -.75em;
+  }
+}

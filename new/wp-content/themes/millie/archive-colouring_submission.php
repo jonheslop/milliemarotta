@@ -12,7 +12,7 @@ elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'blankslate' ), get_th
     'hide_empty' => 0
 ) ); ?>
 
-<p class="colouring-submit"><strong>Filter by colouring book:</strong>
+<p class="colouring-submit wrapper cf"><strong>Filter by colouring book:</strong>
   <?php $index = 1;
   $categoriesCount = count($categories);
   foreach ($categories as $category ) : ?>
@@ -21,8 +21,7 @@ elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'blankslate' ), get_th
     } ?>
     <?php $index++; ?>
   <?php endforeach; ?>
-</p>
-<p class="colouring-submit"><a class="button button_buy" href="<?php echo get_permalink(27); ?>">Submit your colouring here</a></p>
+  <a class="button button_buy colouring_button" href="<?php echo get_permalink(27); ?>">Submit your colouring here</a></p>
 </header>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'grid' ); ?>

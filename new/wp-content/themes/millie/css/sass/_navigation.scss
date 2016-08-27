@@ -1,13 +1,28 @@
-#menu { margin-top: 3em; float: right;
+#menu {
+  float: right;
+  margin-top: 3em;
+  margin-right: .75em;
+
   @include breakpoint-max($tablet) {
     text-align: center;
   }
 
-	ul { margin: 0; padding: 0; }
-	li { display: inline-block;
-		&+li { margin-left: .375em; }
-		&:after { content: "\2022"; margin-left: .375em; position: relative; top: 1px; }
-		&:last-of-type:after { display: none; }
+	ul {
+    margin: 0;
+    padding: 0; }
+	li {
+    display: inline-block;
+		&+li {
+      margin-left: .375em;
+    }
+		&:after {
+      content: "\2022";
+      margin-left: .375em;
+      position: relative;
+      top: 1px; }
+		&:last-of-type:after {
+      display: none;
+    }
 		a {
 			&:link, &:visited {
 				text-decoration: none;
