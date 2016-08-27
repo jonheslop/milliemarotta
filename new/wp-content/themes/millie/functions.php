@@ -139,3 +139,14 @@ function widont($str = '')
 {
   return preg_replace( '|([^\s])\s+([^\s]+)\s*$|', '$1&nbsp;$2', $str);
 }
+
+
+// http://thereforei.am/2011/10/28/advanced-taxonomy-queries-with-pretty-urls/
+function eg_add_rewrite_rules() {
+    global $wp_rewrite;
+    $new_rules = array(
+        'CreatureCuriosities' => 'creaturecuriosities',
+    );
+    $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+}
+add_action( 'generate_rewrite_rules', 'eg_add_rewrite_rules' );
