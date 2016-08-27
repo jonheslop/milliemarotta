@@ -28,9 +28,6 @@
 <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 <?php endwhile; endif; ?>
 
-<?php print_r($current_post_category); ?>
-<?php echo '<h1>' . $current_post_category[0]->term_id . '</h1>'; ?>
-
 <section class="cf all-work">
 <?php $allWorkArgs = array(
     'post_type' => array('millie_work'),
