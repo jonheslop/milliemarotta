@@ -1,4 +1,8 @@
 #menu { margin-top: 3em; float: right;
+  @include breakpoint-max($tablet) {
+    text-align: center;
+  }
+
 	ul { margin: 0; padding: 0; }
 	li { display: inline-block;
 		&+li { margin-left: .375em; }
