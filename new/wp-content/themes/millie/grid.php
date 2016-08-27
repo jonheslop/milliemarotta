@@ -3,7 +3,7 @@
     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
       <?php if ( has_post_thumbnail() && get_post_type() == 'millie_creature' ) {
         the_post_thumbnail('smaller-crop');
-      } elseif ( has_post_thumbnail() && get_post_type() == 'colouring_submission' ) {
+      } elseif ( has_post_thumbnail() ) {
         the_post_thumbnail('small-crop');
       } elseif ( get_post_type() == 'colouring_submission' ) {
         $image = get_field('image');
