@@ -35,7 +35,7 @@ function register_submission_post_type() {
     'description'           => __( 'Colouring submissions', 'text_domain' ),
     'labels'                => $labels,
     'supports'              => array( 'title', 'editor',),
-    'taxonomies'            => array( 'post_tag' ),
+    'taxonomies'            => array( 'colouring_book', 'post_tag' ),
     'hierarchical'          => false,
     'rewrite' => array('slug' => 'colouring-gallery', 'with_front' => true),
     'public'                => true,
@@ -54,3 +54,20 @@ function register_submission_post_type() {
 
 }
 add_action( 'init', 'register_submission_post_type', 0 );
+
+function themes_taxonomy() {  
+    register_taxonomy(  
+        'colouring_book',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+        'colouring_submission',        //post type name
+        array(  
+            'hierarchical' => true,  
+            'label' => 'Colouring Book',  //Display name
+            'query_var' => true,
+            'rewrite' => array(
+                'slug' => 'colouring-book', // This controls the base slug that will display before each term
+                'with_front' => false // Don't display the category base before 
+            )
+        )  
+    );  
+}  
+add_action( 'init', 'themes_taxonomy');
