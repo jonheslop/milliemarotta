@@ -3,5 +3,6 @@ jQuery(document).ready(function(e){
     autoplay: true,
     autoplaySpeed: 7000,
     dots: true,
+    adaptiveHeight: true
   });
 });

@@ -3,8 +3,8 @@
   width: 50%;
 
   @include breakpoint($tablet-landscape) {
-    margin: 0 31.25% 1.5em;
-    width: 37.5%;
+    margin: 0 34.375% 1.5em;
+    width: 31.25%;
   }
   img {
     border: 1px solid $grey;
