@@ -40,9 +40,12 @@ header[role="banner"] { position: relative; z-index: 100; }
 	&_big {
 		p { font-size: 1.25em; line-height: 1.2; }
 	}
-	&-home { width: 100%; margin-bottom: 2em;
-		@include breakpoint($tablet) { width: 37.5%; margin: 0 6.25%; }
-	}
+  &-home { width: 100%; margin-bottom: 2em;
+    @include breakpoint($tablet) { width: 37.5%; margin: 0 6.25%; }
+  }
+  &-home-new { width: 100%; margin-bottom: 2em; text-align: center;
+    @include breakpoint($tablet) { width: 37.5%; margin: 1.5em 31.25% 0; }
+  }
 }
 
 .home-page-image { width: 100%;

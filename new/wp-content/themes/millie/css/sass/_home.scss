@@ -1,0 +1,15 @@
+.home-gallery {
+  list-style-type: none;
+  margin: 1.5em 0;
+  width: 100%;
+  opacity: 0;
+
+  &.slick-initialized {
+    opacity: 1;
+  }
+
+  @include breakpoint($tablet-mid) {
+    margin: 1.5em 18.75%;
+    width: 62.5%;
+  }
+}

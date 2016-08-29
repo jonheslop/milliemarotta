@@ -34,7 +34,7 @@ function register_submission_post_type() {
     'label'                 => __( 'Submissions', 'text_domain' ),
     'description'           => __( 'Colouring submissions', 'text_domain' ),
     'labels'                => $labels,
-    'supports'              => array( 'title', 'editor',),
+    'supports'              => array( 'title', 'editor' ),
     'taxonomies'            => array( 'colouring_book', 'post_tag' ),
     'hierarchical'          => false,
     'rewrite' => array('slug' => 'colouring-galleries', 'with_front' => true),

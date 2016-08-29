@@ -34,7 +34,7 @@ function register_work_post_type() {
     'label'                 => __( 'Work', 'text_domain' ),
     'description'           => __( 'Millie’s work', 'text_domain' ),
     'labels'                => $labels,
-    'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', ),
+    'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields'  ),
     'taxonomies'            => array( 'category', 'post_tag' ),
     'hierarchical'          => false,
     'rewrite' => array('slug' => 'work', 'with_front' => true),

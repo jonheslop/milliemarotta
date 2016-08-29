@@ -1,3 +1,7 @@
-jQuery(document).ready(function($){
-	console.log('ready');
+jQuery(document).ready(function(e){
+  jQuery('.home-gallery').slick({
+    autoplay: true,
+    autoplaySpeed: 7000,
+    dots: true,
+  });
 });
