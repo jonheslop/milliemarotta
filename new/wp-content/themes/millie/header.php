@@ -4,10 +4,10 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width" />
-        <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/modernizr-2.8.3.min.js"></script>
-		<script src="https://use.typekit.net/dlu1riv.js"></script>
-		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/modernizr-2.8.3.min.js"></script>
 		<?php wp_head(); ?>
+    <script src="https://use.typekit.net/dlu1riv.js"></script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
 	</head>
 	<body <?php body_class(); ?>>
 		<!--[if lt IE 8]>
