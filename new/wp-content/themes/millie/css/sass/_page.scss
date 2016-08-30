@@ -9,14 +9,24 @@
 }
 
 .page-anchors {
+  border-bottom: .125em solid $lightgrey;
+  margin: 1.5em 0 0;
+  padding: 0 0 .75em;
+  text-align: center;
+
   @include breakpoint($tablet) {
+    border-bottom: 0;
     border-right: .125em solid $lightgrey;
     list-style: none;
-    margin-right: 1.5em;
-    padding-right: .75em;
+    margin: 0 1.5em 0 0;
+    padding: 0 .75em 0 0;
     position: absolute;
     right: 100%;
     text-align: right;
+
+    li {
+      display: inline;
+    }
   }
 
   ul {
