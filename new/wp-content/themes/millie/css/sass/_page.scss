@@ -4,5 +4,27 @@
 }
 
 .type-page .entry-content {
+  position: relative;
   text-align: left;
+}
+
+.page-anchors {
+  border-right: .125em solid $lightgrey;
+  list-style: none;
+  padding-right: .75em;
+  margin-right: .75em;
+  position: absolute;
+  right: 100%;
+  text-align: right;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  a {
+    font-variant: small-caps;
+    letter-spacing: .0625em;
+    text-transform: lowercase;
+  }
 }
