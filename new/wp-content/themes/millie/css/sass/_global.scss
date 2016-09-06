@@ -10,7 +10,7 @@ ul { list-style-type: circle; }
 
 a {
 	&:link, &:visited { color: $darkgrey; text-decoration: none; }
-	&:hover { color: saturate($darkgrey, 20%); }
+	&:hover { color: saturate($darkgrey, 20%); text-decoration: underline; }
 }
 
 header[role="banner"] { position: relative; z-index: 100; }
