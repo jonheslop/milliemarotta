@@ -20,9 +20,9 @@
         <li>
           <figure>
             <img
-              srcset="<?php echo $img['sizes']['small']; ?> 200w,
-                <?php echo $img['sizes']['medium']; ?> 600w,
-                <?php echo $img['sizes']['large']; ?> 1000w"
+              srcset="<?php echo $image['sizes']['small']; ?> 200w,
+                <?php echo $image['sizes']['medium']; ?> 600w,
+                <?php echo $image['sizes']['large']; ?> 1000w"
               src="<?php echo $image['sizes']['large']; ?>"
               alt="<?php echo $image['alt']; ?>"
             />
