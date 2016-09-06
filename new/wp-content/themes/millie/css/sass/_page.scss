@@ -11,7 +11,7 @@
 .info-panel {
   display: none;
 
-  &:target {
+  &:first-of-type {
     display: block;
   }
 }

@@ -24,14 +24,9 @@ jQuery(document).ready(function(e){
   if ( jQuery('.page-anchors').length ) {
     var hash = window.location.hash;
     jQuery('.page-anchors a').click(function(e){
-      e.preventDefault();
       hash = jQuery(this).attr('href');
-      window.location = hash;
-    });
-    jQuery('.page-anchors a').first().click(function(e){
-      e.preventDefault();
-      hash = jQuery(this).attr('href');
-      window.location = hash;
+      $('.info-panel').hide();
+      $(hash).show();
     });
   }
 
