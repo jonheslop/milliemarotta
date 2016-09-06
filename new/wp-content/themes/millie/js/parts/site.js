@@ -22,8 +22,11 @@ jQuery(document).ready(function(e){
 
   // Info page anchors
   if ( jQuery('.page-anchors').length ) {
+    var hash = window.location.hash;
     jQuery('.page-anchors a').click(function(e){
       e.preventDefault();
+      hash = jQuery(this).attr('href');
+      window.location = hash;
     });
     jQuery('.page-anchors a').click().first();
   }
