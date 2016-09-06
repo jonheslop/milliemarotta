@@ -1,13 +1,10 @@
-.creature-crop {
+ .creature-crop {
   margin: 0 25%;
   width: 50%;
 
   @include breakpoint($tablet-landscape) {
-    margin: 0 34.375% 1.5em;
-    width: 31.25%;
-  }
-  img {
-    border: 1px solid $grey;
+    margin: 0 0 1.5em;
+    width: 37.5%;
   }
 }
 
