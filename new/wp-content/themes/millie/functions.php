@@ -88,6 +88,12 @@ return $count;
 		add_image_size('compact', 128, 9999);
 	}
 
+// Remove max_srcset_image_width.
+function remove_max_srcset_image_width( $max_width ) {
+ return false;
+}
+add_filter( 'max_srcset_image_width', 'remove_max_srcset_image_width' );
+
     function new_excerpt_more($more) {
     	return '&hellip;';
     }
