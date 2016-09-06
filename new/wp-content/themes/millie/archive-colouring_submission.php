@@ -7,6 +7,13 @@ elseif ( is_month() ) { printf( __( 'Monthly Archives: %s', 'blankslate' ), get_
 elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'blankslate' ), get_the_time( 'Y' ) ); }
 ?></h1>
 
+<header class="header">
+    <h1 class="entry-title">Welcome to the Colouring Gallery</h1>
+  </header>
+<section class="entry-content">
+  <p>Share your work here and browse all the wonderful submissions from others. Whether you&rsquo;re after colour palette inspiration, ideas for interesting techniques or just want to have a gander, peruse at your&nbsp;leisure.</p>
+</section>
+
 <?php $categories = get_terms( 'colouring_book', array(
     'order' => 'asc',
     'hide_empty' => 0

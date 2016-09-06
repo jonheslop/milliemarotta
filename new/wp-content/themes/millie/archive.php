@@ -15,6 +15,9 @@ else { _e( 'Archives', 'blankslate' ); }
       Creature Curiosities
     </h1>
   </header>
+  <section class="entry-content">
+    <p>Discover more about the animals you’ll find in Curious Creatures and why I find them so intriguing.</p>
+  </section>
 <?php endif; ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'grid' ); ?>
