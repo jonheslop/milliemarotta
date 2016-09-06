@@ -6,7 +6,7 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header>
   <?php if ( has_post_thumbnail() ) : ?>
-  <section class="entry-content">
+  <section class="entry-content cf">
     <figure class="wrapper page-image">
        <?php the_post_thumbnail('large'); ?>
     </figure>
