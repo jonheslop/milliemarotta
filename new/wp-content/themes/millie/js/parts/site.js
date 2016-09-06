@@ -13,6 +13,7 @@ jQuery(document).ready(function(e){
 
   $submissionNameField.change(function(e){
     submissionName = e.val();
-    jQuery('#acf-_post_title').val('submissionName');
+    jQuery('#acf-_post_title').val(submissionName);
   });
+
 });
