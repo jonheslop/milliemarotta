@@ -13,7 +13,7 @@ a {
 	&:hover { color: $darkgrey; text-decoration: underline; }
 }
 
-p {
+.entry-content {
   a {
     &:link, &:visited { color: $green; }
     &:hover { color: saturate($green, 20%); }
