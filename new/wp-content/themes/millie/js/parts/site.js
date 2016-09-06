@@ -28,7 +28,7 @@ jQuery(document).ready(function(e){
       hash = jQuery(this).attr('href');
       window.location = hash;
     });
-    jQuery('.page-anchors a').click().first();
+    jQuery('.page-anchors a').first().click();
   }
 
 });
