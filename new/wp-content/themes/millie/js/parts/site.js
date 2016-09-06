@@ -11,7 +11,8 @@ jQuery(document).ready(function(e){
 
   // Autofill submissions title based on other field
 
-  jQuery('.acf-field--post-title').hide();
+  jQuery('.acf-field--post-title').hide().next('.acf-field').css('border-top', 0);
+
   $submissionNameField = jQuery('#acf-field_574ad7c763d44');
 
   $submissionNameField.change(function(){
