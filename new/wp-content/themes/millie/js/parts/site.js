@@ -20,4 +20,12 @@ jQuery(document).ready(function(e){
     jQuery('#acf-_post_title').val(submissionName);
   });
 
+  // Info page anchors
+  if ( jQuery('.page-anchors').length ) {
+    jQuery('.page-anchors a').click(function(e){
+      e.preventDefault();
+    });
+    jQuery('.page-anchors a').click().first();
+  }
+
 });
