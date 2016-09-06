@@ -5,4 +5,14 @@ jQuery(document).ready(function(e){
     dots: true,
     adaptiveHeight: true
   });
+
+  // Autofill submissions title based on other field
+
+  jQuery('.acf-field--post-title').hide();
+  $submissionNameField = jQuery('#acf-field_574ad7c763d44');
+
+  $submissionNameField.change(function(e){
+    submissionName = e.val();
+    jQuery('#acf-_post_title').val('submissionName');
+  });
 });
