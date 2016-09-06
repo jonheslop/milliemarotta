@@ -13,25 +13,28 @@
 	li {
     display: inline-block;
 		&+li {
-      margin-left: .375em;
+      margin-left: 1em;
     }
 		&:after {
       content: "\2022";
-      margin-left: .375em;
+      margin-left: 1em;
       position: relative;
       top: 1px; }
 		&:last-of-type:after {
       display: none;
     }
 		a {
-			&:link, &:visited {
-				text-decoration: none;
-				font-weight: bold;
-				text-transform: lowercase;
-				font-variant: small-caps;
+			&:link,
+      &:visited {
+        border-bottom: 1px solid transparent;
+        font-size: 1.125em;
+        font-variant: small-caps;
+        font-weight: bold;
 				letter-spacing: .0625em;
-				border-bottom: 1px solid $lightgrey;
+        text-decoration: none;
+        text-transform: lowercase;
 			}
+
 			&:hover {
 				border-bottom: 1px solid $grey;
 			}
