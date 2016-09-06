@@ -23,7 +23,7 @@
               srcset="<?php echo $image['sizes']['small']; ?> 200w,
                 <?php echo $image['sizes']['medium']; ?> 600w,
                 <?php echo $image['sizes']['grande']; ?> 1000w,
-                <?php echo $image['sizes']['large']; ?> 1280w"
+                <?php echo $image['sizes']['original']; ?> 1280w"
               src="<?php echo $image['sizes']['large']; ?>"
               sizes="(max-width: 1280px) 100vw, 1280px"
               alt="<?php echo $image['alt']; ?>"
