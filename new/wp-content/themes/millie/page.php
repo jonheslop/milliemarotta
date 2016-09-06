@@ -7,7 +7,7 @@
 	</header>
 	<section class="entry-content">
     <?php if ( has_post_thumbnail() ) : ?>
-    <figure class="wrapper creature-crop">
+    <figure class="wrapper page-image">
        <?php the_post_thumbnail('large'); ?>
     </figure>
     <? endif; ?>
