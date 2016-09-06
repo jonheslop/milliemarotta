@@ -5,11 +5,13 @@
 	<header class="header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header>
-	<section class="entry-content">
-    <?php if ( has_post_thumbnail() ) : ?>
+  <?php if ( has_post_thumbnail() ) : ?>
+  <section class="entry-content">
     <figure class="wrapper page-image">
        <?php the_post_thumbnail('large'); ?>
     </figure>
+  </section>
+	<section class="entry-content">
     <? endif; ?>
 		<?php the_content(); ?>
 	</section>
