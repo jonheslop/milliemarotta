@@ -14,8 +14,8 @@ jQuery(document).ready(function(e){
   jQuery('.acf-field--post-title').hide();
   $submissionNameField = jQuery('#acf-field_574ad7c763d44');
 
-  $submissionNameField.change(function(e){
-    submissionName = e.val();
+  $submissionNameField.change(function(){
+    submissionName = $submissionNameField.val();
     jQuery('#acf-_post_title').val(submissionName);
   });
 
