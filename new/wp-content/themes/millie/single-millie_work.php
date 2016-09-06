@@ -25,7 +25,7 @@
                 <?php echo $image['sizes']['grande']; ?> 1000w,
                 <?php echo $image['sizes']['large']; ?> 1280w"
               src="<?php echo $image['sizes']['large']; ?>"
-              sizes="(max-width: 1200px) 100vw, 1200px"
+              sizes="(max-width: 1280px) 100vw, 1280px"
               alt="<?php echo $image['alt']; ?>"
             />
           </figure>
