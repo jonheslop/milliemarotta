@@ -8,6 +8,14 @@
   text-align: left;
 }
 
+.info-panel {
+  display: none;
+
+  &:target {
+    display: block;
+  }
+}
+
 .page-anchors {
   border-bottom: .125em solid $lightgrey;
   margin: 1.5em 0 0;
