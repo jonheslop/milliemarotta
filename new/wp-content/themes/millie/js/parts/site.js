@@ -24,6 +24,7 @@ jQuery(document).ready(function(e){
   if ( jQuery('.page-anchors').length ) {
     var hash = window.location.hash;
     jQuery('.page-anchors a').click(function(e){
+      e.preventDefault();
       hash = jQuery(this).attr('href');
       jQuery('.info-panel').hide();
       jQuery(hash).show();
