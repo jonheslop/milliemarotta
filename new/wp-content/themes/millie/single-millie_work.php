@@ -18,7 +18,15 @@
     <ul class="wrapper work-gallery">
       <?php foreach( $images as $image ): ?>
         <li>
-          <figure><img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" /></figure>
+          <figure>
+            <img
+              srcset="<?php echo $img['sizes']['small']; ?> 200w,
+                <?php echo $img['sizes']['medium']; ?> 600w,
+                <?php echo $img['sizes']['large']; ?> 1000w"
+              src="<?php echo $image['sizes']['large']; ?>"
+              alt="<?php echo $image['alt']; ?>"
+            />
+          </figure>
           <p class="work-image-caption"><?php echo $image['caption']; ?></p>
         </li>
       <?php endforeach; ?>
