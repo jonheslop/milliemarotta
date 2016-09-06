@@ -15,8 +15,8 @@ a {
 
 p {
   a {
-    &:link, &:visited { color: $darkgrey; }
-    &:hover { color: saturate($darkgrey, 20%); }
+    &:link, &:visited { color: $green; }
+    &:hover { color: saturate($green, 20%); }
   }
 }
 
