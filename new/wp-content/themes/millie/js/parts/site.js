@@ -1,10 +1,13 @@
 jQuery(document).ready(function(e){
-  jQuery('.home-gallery').slick({
-    autoplay: true,
-    autoplaySpeed: 7000,
-    dots: true,
-    adaptiveHeight: true
-  });
+
+  if ( jQuery('.home-gallery').length ) {
+    jQuery('.home-gallery').slick({
+      autoplay: true,
+      autoplaySpeed: 7000,
+      dots: true,
+      adaptiveHeight: true
+    });
+  }
 
   // Autofill submissions title based on other field
 
