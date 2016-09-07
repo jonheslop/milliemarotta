@@ -3,8 +3,6 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?>>
     <header class="wrapper work-header">
-      <span style="float:left;">&laquo;&nbsp;<a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">Back to submissions</a></span>
-      <span style="float:right;"><a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">View all </a>&nbsp;&raquo;</span>
       <h1 class="entry-title">
         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">by <?php the_field('name'); ?></a>
       </h1>
@@ -22,6 +20,8 @@
             <p><strong><em>Millie says:</em></strong> <?php echo $millies_comments; ?></p>
           </div>
         <? endif; ?>
+      <span style="float:left;">&laquo;&nbsp;<a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">Back to submissions</a></span>
+      <span style="float:right;"><a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">View all </a>&nbsp;&raquo;</span>
     </section>
       <?php $image = get_field('image');
           if ( !empty($image) ) {
