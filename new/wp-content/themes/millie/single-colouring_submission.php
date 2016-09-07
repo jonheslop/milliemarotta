@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 <section id="content" role="main" class="container content-container">
-<header class="header work-header">
-  <p><a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">Back to submissions</a></p>
+<header class="header work-header cf">
+  <p style="float:left;"><a href="&laquo;&nbsp;<?php echo get_post_type_archive_link('colouring_submission'); ?>">Back to submissions</a></p>
+  <p style="float:right;"><a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">View all </a>&nbsp;&raquo;</p>
 </header>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?>>
