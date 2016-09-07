@@ -16,7 +16,12 @@
 
   if( $images ): ?>
     <ul class="wrapper work-gallery">
-      <?php foreach( $images as $image ): ?>
+      <?php foreach( $images as $image ) :
+        $imageWidth = $image['width'];
+        $imageHeight = $image['height'];
+        $ratio = $imageWidth / $imageHeight;
+        echo $ratio;
+      ?>
         <li>
           <figure>
             <img
