@@ -15,7 +15,7 @@
 ) ); ?>
 
 <p class="colouring-submit wrapper cf"><strong>Filter by colouring book:</strong>
-  <a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">View all</a>,
+  <a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">All</a>,
   <?php $index = 1;
   $categoriesCount = count($categories);
   foreach ($categories as $category ) : ?>
