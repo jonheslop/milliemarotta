@@ -80,7 +80,10 @@ return $count;
 	add_theme_support( 'post-thumbnails', array('post') );
 	set_post_thumbnail_size( 80, 80, true ); // default Post Thumbnail dimensions (cropped)
 	if ( function_exists( 'add_image_size' ) ) { 
-		add_image_size('grande', 768, 9999);
+    add_image_size('cinema', 2048, 9999);
+    add_image_size('desktop', 1600, 9999);
+    add_image_size('laptop', 1200, 9999);
+    add_image_size('grande', 768, 9999);
     add_image_size('small', 512, 9999);
     add_image_size('small-crop', 512, 512, true);
 		add_image_size('smaller', 256, 9999);
