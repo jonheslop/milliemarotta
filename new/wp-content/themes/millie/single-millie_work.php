@@ -20,11 +20,14 @@
         $imageWidth = $image['width'];
         $imageHeight = $image['height'];
         $ratio = $imageWidth / $imageHeight;
-        echo $ratio;
+        // echo $ratio;
       ?>
         <li>
           <figure>
             <img
+              <?php if ( $ratio >= 1 ) : ?>
+              class="portrait-image"
+              <?php endif; ?>
               srcset="<?php echo $image['sizes']['small']; ?> 200w,
                 <?php echo $image['sizes']['medium']; ?> 300w,
                 <?php echo $image['sizes']['grande']; ?> 600w,
