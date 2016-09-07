@@ -1,15 +1,13 @@
 <?php get_header(); ?>
 <section id="content" role="main" class="container content-container">
-<header class="header work-header cf">
-  <p style="float:left;">&laquo;&nbsp;<a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">Back to submissions</a></p>
-  <p style="float:right;"><a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">View all </a>&nbsp;&raquo;</p>
-</header>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?>>
     <header class="wrapper work-header">
       <h1 class="entry-title">
         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">by <?php the_field('name'); ?></a>
       </h1>
+      <p style="float:left;">&laquo;&nbsp;<a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">Back to submissions</a></p>
+      <p style="float:right;"><a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">View all </a>&nbsp;&raquo;</p>
     </header>
     <section class="entry-content wrapper">
       <?php $materials = get_field('materials');
