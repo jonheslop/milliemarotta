@@ -16,7 +16,7 @@ elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'blankslate' ), get_th
 
 <?php $categories = get_terms( 'colouring_book', array(
     'orderby' => 'id',
-    'order' => 'DESC',
+    'order' => 'ASC',
     'hide_empty' => 0
 ) ); ?>
 
