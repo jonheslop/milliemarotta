@@ -15,9 +15,11 @@
     <figcaption class="work-grid-item-title-wrap">
       <header>
         <a class="entry-link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+      <?php if ( get_post_type() != 'colouring_submission' ) : ?>
       <?php if ( is_singular() ) { echo '<h1 class="entry-title">'; } else { echo '<h2 class="entry-title">'; } ?><?php echo get_the_title(); ?><?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>
+      <?php endif; ?>
       <? if ( get_post_type() == 'colouring_submission' ) : ?>
-        <p class="entry-categories">by <?php the_field('name'); ?></p>
+       <h2 class="entry-title">by <?php the_field('name'); ?></h2>
       <? endif; ?>
       <? if ( get_post_type() == 'millie_creature' ) : ?>
         <p class="scientific_name"><em><? the_field('scientific_name'); ?></em></p>
