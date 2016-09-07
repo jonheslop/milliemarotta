@@ -19,6 +19,7 @@ elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'blankslate' ), get_th
 ) ); ?>
 
 <p class="colouring-submit wrapper cf"><strong>Filter by colouring book:</strong>
+    <a href="/" class="current">View all</a>,
   <?php $index = 1;
   $categoriesCount = count($categories);
   foreach ($categories as $category ) : ?>
