@@ -14,7 +14,11 @@
     </a>
     <figcaption class="work-grid-item-title-wrap">
       <header>
+      <? if ( get_post_type() == 'colouring_submission' ) : ?>
         <a class="entry-link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+      <?php else : ?>
+        <a class="entry-link" href="<?php the_permalink(); ?>" title="<?php the_field('name'); ?>" rel="bookmark">
+      <?php endif; ?>
       <?php if ( get_post_type() != 'colouring_submission' ) : ?>
       <?php if ( is_singular() ) { echo '<h1 class="entry-title">'; } else { echo '<h2 class="entry-title">'; } ?><?php echo get_the_title(); ?><?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>
       <?php endif; ?>
