@@ -4,9 +4,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?>>
     <header class="wrapper work-header">
       <h1 class="entry-title">
-        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
+        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">by <?php the_field('name'); ?></a>
       </h1>
-      <p class="entry-categories">by <?php the_field('name'); ?></p>
     </header>
     <section class="entry-content wrapper">
       <?php $materials = get_field('materials');
