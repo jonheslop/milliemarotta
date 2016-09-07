@@ -1,15 +1,13 @@
 <?php get_header(); ?>
 <section id="content" role="main" class="container content-container">
-<header class="header">
+<header class="header work-header">
 <h1 class="entry-title"><?php 
 if ( is_day() ) { printf( __( 'Daily Archives: %s', 'blankslate' ), get_the_time( get_option( 'date_format' ) ) ); }
 elseif ( is_month() ) { printf( __( 'Monthly Archives: %s', 'blankslate' ), get_the_time( 'F Y' ) ); }
 elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'blankslate' ), get_the_time( 'Y' ) ); }
 ?></h1>
 
-<header class="header">
-    <h1 class="entry-title">Welcome to the Colouring Gallery</h1>
-  </header>
+<h1 class="entry-title">Welcome to the Colouring Gallery</h1>
 <section class="entry-content">
   <p>Share your work here and browse all the wonderful submissions from others. Whether you&rsquo;re after colour palette inspiration, ideas for interesting techniques or just want to have a gander, peruse at your&nbsp;leisure.</p>
 </section>
