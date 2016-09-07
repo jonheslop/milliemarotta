@@ -25,7 +25,7 @@
         <li>
           <figure>
             <img
-              <?php if ( $ratio >= 1 ) : ?>
+              <?php if ( $ratio <= 1 ) : ?>
               class="portrait-image"
               <?php endif; ?>
               srcset="<?php echo $image['sizes']['small']; ?> 200w,
