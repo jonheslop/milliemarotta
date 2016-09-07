@@ -7,7 +7,7 @@
     <li>
       <a href="<?php echo get_permalink($featuredPost->ID); ?>">
         <figure>
-          <?php echo get_the_post_thumbnail($featuredPost->ID,'large'); ?>
+          <?php echo get_the_post_thumbnail($featuredPost->ID,'desktop'); ?>
         </figure>
       </a>
     </li>
