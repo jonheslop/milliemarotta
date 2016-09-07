@@ -1,6 +1,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('wrapper work-grid-item'); ?>>
   <figure>
-    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+      <? if ( get_post_type() == 'colouring_submission' ) : ?>
+        <a class="entry-link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+      <?php else : ?>
+        <a class="entry-link" href="<?php the_permalink(); ?>" title="<?php the_field('name'); ?>" rel="bookmark">
+      <?php endif; ?>
       <?php if ( has_post_thumbnail() && get_post_type() == 'millie_creature' ) {
         the_post_thumbnail('smaller-crop');
       } elseif ( has_post_thumbnail() ) {
