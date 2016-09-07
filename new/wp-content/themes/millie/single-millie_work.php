@@ -23,9 +23,12 @@
               srcset="<?php echo $image['sizes']['small']; ?> 200w,
                 <?php echo $image['sizes']['medium']; ?> 300w,
                 <?php echo $image['sizes']['grande']; ?> 600w,
-                <?php echo $image['sizes']['large']; ?> 1000w"
+                <?php echo $image['sizes']['large']; ?> 1000w,
+                <?php echo $image['sizes']['laptop']; ?> 1200w,
+                <?php echo $image['sizes']['desktop']; ?> 1600w,
+                <?php echo $image['sizes']['cinema']; ?> 2000w"
               src="<?php echo $image['sizes']['large']; ?>"
-              sizes="(max-width: 1000px) 100vw, 1000px"
+              sizes="(max-width: 2000px) 100vw, 2000px"
               alt="<?php echo $image['alt']; ?>"
             />
           </figure>
