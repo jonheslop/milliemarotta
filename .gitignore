@@ -14,9 +14,9 @@ bourbon/
 *.jscsrc
 node_modules
 npm-debug.log
-new/wp-content/languages/
-new/wp-content/plugins/
-new/wp-content/w3tc-config/
+wp-content/languages/
+wp-content/plugins/
+wp-content/w3tc-config/
 
 *~
 .DS_Store
@@ -27,60 +27,60 @@ new/wp-content/w3tc-config/
 Thumbs.db
 
 # wordpress specific
-new/wp-config.php
-new/wp-content/uploads/
-new/wp-content/blogs.dir/
-new/wp-content/upgrade/*
-new/wp-content/backup-db/*
-new/wp-content/advanced-cache.php
-new/wp-content/wp-cache-config.php
-new/wp-content/cache/*
-new/wp-content/cache/supercache/*
+wp-config.php
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/*
+wp-content/backup-db/*
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/*
+wp-content/cache/supercache/*
 
 # wpengine specific
 .smushit-status
 .gitattributes
 _wpeprivate
-new/wp-content/object-cache.php
-new/wp-content/mu-plugins/mu-plugin.php
-new/wp-content/mu-plugins/slt-force-strong-passwords.php
-new/wp-content/mu-plugins/limit-login-attempts
-new/wp-content/mu-plugins/wpengine-common
-new/wp-content/mysql.sql
+wp-content/object-cache.php
+wp-content/mu-plugins/mu-plugin.php
+wp-content/mu-plugins/slt-force-strong-passwords.php
+wp-content/mu-plugins/limit-login-attempts
+wp-content/mu-plugins/wpengine-common
+wp-content/mysql.sql
 
 # wp core (as of 3.4.1)
-new/db-config.php
-new/index.php
-new/license.txt
-new/readme.html
-new/wp-activate.php
-new/wp-app.php
-new/wp-atom.php
-new/wp-blog-header.php
-new/wp-comments-post.php
-new/wp-commentsrss2.php
-new/wp-config-sample.php
-new/wp-cron.php
-new/wp-feed.php
-new/wp-links-opml.php
-new/wp-load.php
-new/wp-login.php
-new/wp-mail.php
-new/wp-rdf.php
-new/wp-rss.php
-new/wp-rss2.php
-new/wp-pass.php
-new/wp-register.php
-new/wp-settings.php
-new/wp-signup.php
-new/wp-trackback.php
-new/xmlrpc.php
-new/wp-admin
-new/wp-includes
-new/wp-content/index.php
-new/wp-content/themes/twentyten
-new/wp-content/themes/index.php
-new/wp-content/plugins/index.php
+db-config.php
+index.php
+license.txt
+readme.html
+wp-activate.php
+wp-app.php
+wp-atom.php
+wp-blog-header.php
+wp-comments-post.php
+wp-commentsrss2.php
+wp-config-sample.php
+wp-cron.php
+wp-feed.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-rdf.php
+wp-rss.php
+wp-rss2.php
+wp-pass.php
+wp-register.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+wp-admin
+wp-includes
+wp-content/index.php
+wp-content/themes/twentyten
+wp-content/themes/index.php
+wp-content/plugins/index.php
 
 # large/disallowed file types
 # a CDN should be used for these
