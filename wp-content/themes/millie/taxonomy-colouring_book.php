@@ -6,6 +6,7 @@
 <h1 class="entry-title">Welcome to the Colouring Gallery</h1>
 <section class="entry-content">
   <p>Share your work here and browse all the wonderful submissions from others. Whether you&rsquo;re after colour palette inspiration, ideas for interesting techniques or just want to have a gander, peruse at your&nbsp;leisure.</p>
+  <p><small>Please note that all submissions will need to be approved, so will not appear in the gallery straight away.</small></p>
 </section>
 
 <?php $categories = get_terms( 'colouring_book', array(
