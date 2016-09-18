@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <section id="content" role="main" class="container content-container">
-<header class="header work-header">
+<header class="header work-header cf">
 
   <h1><?php $currentTaxTerm = get_queried_object()->term_id; ?></h1>
   <h1 class="entry-title">Welcome to the Colouring Gallery</h1>

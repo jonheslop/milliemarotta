@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <section id="content" role="main" class="container content-container">
-<header class="header work-header">
+<header class="header work-header cf">
 <h1 class="entry-title"><?php 
 if ( is_day() ) { printf( __( 'Daily Archives: %s', 'blankslate' ), get_the_time( get_option( 'date_format' ) ) ); }
 elseif ( is_month() ) { printf( __( 'Monthly Archives: %s', 'blankslate' ), get_the_time( 'F Y' ) ); }
