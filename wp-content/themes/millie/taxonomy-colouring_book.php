@@ -14,24 +14,26 @@
       'hide_empty' => 0
   ) ); ?>
 
-  <p class="colouring-submit wrapper cf"><strong>Filter by colouring book:</strong>
-    <a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">All</a>,
-    <?php $index = 1;
-    $categoriesCount = count($categories);
-    foreach ($categories as $category ) : ?>
-      <?php if ($currentTaxTerm == $category->term_id) : ?>
-      <a class="current" href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a><?php if ($categoriesCount != $index) {
-        echo ', ';
-      } ?>
-      <?php else : ?>
-      <a href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a><?php if ($categoriesCount != $index) {
-        echo ', ';
-      } ?>
-      <?php endif; ?>
-      <?php $index++; ?>
-    <?php endforeach; ?>
-  </p>
-<a class="button button_buy colouring_button" href="<?php echo get_permalink(27); ?>">Submit your colouring here</a>
+  <div class="cf">
+    <p class="colouring-submit wrapper cf"><strong>Filter by colouring book:</strong>
+      <a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">All</a>,
+      <?php $index = 1;
+      $categoriesCount = count($categories);
+      foreach ($categories as $category ) : ?>
+        <?php if ($currentTaxTerm == $category->term_id) : ?>
+        <a class="current" href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a><?php if ($categoriesCount != $index) {
+          echo ', ';
+        } ?>
+        <?php else : ?>
+        <a href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a><?php if ($categoriesCount != $index) {
+          echo ', ';
+        } ?>
+        <?php endif; ?>
+        <?php $index++; ?>
+      <?php endforeach; ?>
+    </p>
+    <a class="button button_buy colouring_button" href="<?php echo get_permalink(27); ?>">Submit your colouring here</a>
+  </div>
 </header>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'grid' ); ?>
