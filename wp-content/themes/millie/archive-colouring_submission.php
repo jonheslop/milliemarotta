@@ -21,13 +21,9 @@ elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'blankslate' ), get_th
   <div class="cf">
     <p class="colouring-submit wrapper cf"><strong>Filter by colouring book:</strong>
         <a href="/" class="current">All</a>,
-      <?php $index = 1;
-      $categoriesCount = count($categories);
+      <?php $categoriesCount = count($categories);
       foreach ($categories as $category ) : ?>
-        <a href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a><?php if ($categoriesCount != $index) {
-          echo ', ';
-        } ?>
-        <?php $index++; ?>
+        <a href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a>
       <?php endforeach; ?>
     </p>
     <div class="wrapper colouring-button-wrap">

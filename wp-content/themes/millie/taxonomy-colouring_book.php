@@ -17,19 +17,13 @@
   <div class="cf">
     <p class="colouring-submit wrapper cf"><strong>Filter by colouring book:</strong>
       <a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">All</a>,
-      <?php $index = 1;
-      $categoriesCount = count($categories);
+      <?php $categoriesCount = count($categories);
       foreach ($categories as $category ) : ?>
         <?php if ($currentTaxTerm == $category->term_id) : ?>
-        <a class="current" href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a><?php if ($categoriesCount != $index) {
-          echo ', ';
-        } ?>
+        <a class="current" href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a>
         <?php else : ?>
-        <a href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a><?php if ($categoriesCount != $index) {
-          echo ', ';
-        } ?>
+        <a href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a>
         <?php endif; ?>
-        <?php $index++; ?>
       <?php endforeach; ?>
     </p>
     <div class="wrapper colouring-button-wrap">
