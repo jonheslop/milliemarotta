@@ -30,7 +30,7 @@ elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'blankslate' ), get_th
         <?php $index++; ?>
       <?php endforeach; ?>
     </p>
-    <div class="wrapper colouring_button_wrap">
+    <div class="wrapper colouring-button-wrap">
       <a class="button button_buy colouring_button" href="<?php echo get_permalink(27); ?>">Submit your colouring here</a></p>
     </div>
   </div>

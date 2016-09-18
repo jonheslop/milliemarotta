@@ -79,13 +79,12 @@
   }
 }
 
-.colouring_button_wrap {
+.colouring-button-wrap {
   float: right;
   margin-top: .75em;
   width: 100%;
 
   @include breakpoint($tablet-landscape) {
-    margin-top: -.75em;
     width: 33.333333333%;
   }
 }
