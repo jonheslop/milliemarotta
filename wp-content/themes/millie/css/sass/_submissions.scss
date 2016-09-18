@@ -66,20 +66,26 @@
 
 .colouring-submit {
   margin: 1.5em 0 3em;
-  width: 62.5%;
+  width: 100%;
+
+  @include breakpoint($tablet-landscape) {
+    width: 75%;
+  }
 
   .current {
-    text-decoration: underline;
     color: $green;
+    text-decoration: underline;
   }
 }
-.colouring_button {
+
+.colouring_button_wrap {
   float: right;
   margin-top: .75em;
-  
+  width: 100%;
+
   @include breakpoint($tablet-landscape) {
     margin-top: -.75em;
-    width: 37.5%;
+    width: 25%;
   }
 }
 

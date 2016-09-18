@@ -32,7 +32,9 @@
         <?php $index++; ?>
       <?php endforeach; ?>
     </p>
-    <a class="button button_buy colouring_button" href="<?php echo get_permalink(27); ?>">Submit your colouring here</a>
+    <div class="wrapper colouring_button_wrap">
+      <a class="button button_buy colouring_button" href="<?php echo get_permalink(27); ?>">Submit your colouring here</a></p>
+    </div>
   </div>
 </header>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
