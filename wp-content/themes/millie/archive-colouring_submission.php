@@ -20,7 +20,7 @@ elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'blankslate' ), get_th
 
   <div class="cf">
     <p class="colouring-submit wrapper cf"><strong>Filter by colouring book:</strong>
-        <a href="/" class="current">All</a>,
+        <a href="/" class="current">All</a>
       <?php $categoriesCount = count($categories);
       foreach ($categories as $category ) : ?>
         <a href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a>

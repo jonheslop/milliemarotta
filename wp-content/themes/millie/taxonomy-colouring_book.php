@@ -16,7 +16,7 @@
 
   <div class="cf">
     <p class="colouring-submit wrapper cf"><strong>Filter by colouring book:</strong>
-      <a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">All</a>,
+      <a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">All</a>
       <?php $categoriesCount = count($categories);
       foreach ($categories as $category ) : ?>
         <?php if ($currentTaxTerm == $category->term_id) : ?>
