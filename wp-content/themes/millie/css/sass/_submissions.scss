@@ -66,8 +66,8 @@
 
 .colouring-submit {
   margin: 1.5em 0 3em;
-  width: 100%;
-  
+  width: 62.5%;
+
   .current {
     text-decoration: underline;
     color: $green;
@@ -79,6 +79,7 @@
   
   @include breakpoint($tablet-landscape) {
     margin-top: -.75em;
+    width: 37.5%;
   }
 }
 
