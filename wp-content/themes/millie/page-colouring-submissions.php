@@ -21,7 +21,7 @@
       'post_type' => 'colouring_submission',
       'post_status' => 'pending'
     ),
-    'fields' => array(13,14,15,251),
+    'fields' => array(13,1041,14,15,251),
     'submit_value' => __('Submit', 'acf'),
     'updated_message' => __('Thanks! Your submission will be reviewed before it is published. Please check back again later to see it in the gallery.', 'acf')
   ));
