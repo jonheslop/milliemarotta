@@ -12,12 +12,9 @@
       } elseif ( get_post_type() == 'colouring_submission' ) {
         $image = get_field('image');
         if ( !empty($image) ) {
-          echo '<img src="' . $image['sizes']['small-crop'] . '" />';
+          echo '<img class="submission" src="' . $image['sizes']['small-crop'] . '" />';
         }
       } ?>
-      <!-- 
-      <?php get_intermediate_image_sizes(); ?>
-       -->
     </a>
     <figcaption class="work-grid-item-title-wrap">
       <header>
