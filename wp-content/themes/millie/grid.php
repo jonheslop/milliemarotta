@@ -12,7 +12,7 @@
       } elseif ( get_post_type() == 'colouring_submission' ) {
         $image = get_field('image');
         if ( !empty($image) ) {
-          echo '<img class="submission" src="' . $image['sizes']['small-crop'] . '" />';
+          echo '<img class="submission" src="' . $image['sizes']['smaller-crop'] . '" />';
         }
       } ?>
     </a>
