@@ -26,6 +26,7 @@
     'updated_message' => __('Thanks! Your submission will be reviewed before it is published. Please check back again later to see it in the gallery.', 'acf')
   ));
   
+  acf_enqueue_uploader();
   ?>
 </article>
 </section>
