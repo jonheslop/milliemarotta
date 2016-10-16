@@ -153,3 +153,29 @@ add_filter( 'wp_image_editors', 'change_graphic_lib' );
 function change_graphic_lib($array) {
  return array( 'WP_Image_Editor_GD', 'WP_Image_Editor_Imagick' );
 }
+
+// Show pending submissions
+add_filter( 'add_menu_classes', 'show_pending_number');
+function show_pending_number( $menu ) {
+    $type = "colouring_submission";
+    $status = "pending";
+    $num_posts = wp_count_posts( $type, 'readable' );
+    $pending_count = 0;
+    if ( !empty($num_posts->$status) )
+        $pending_count = $num_posts->$status;
+
+    // build string to match in $menu array
+    if ($type == 'post') {
+        $menu_str = 'edit.php';
+    } else {
+        $menu_str = 'edit.php?post_type=' . $type;
+    }
+
+    // loop through $menu items, find match, add indicator
+    foreach( $menu as $menu_key => $menu_data ) {
+        if( $menu_str != $menu_data[2] )
+            continue;
+        $menu[$menu_key][0] .= " <span class='update-plugins count-$pending_count'><span class='plugin-count'>" . number_format_i18n($pending_count) . '</span></span>';
+    }
+    return $menu;
+}
