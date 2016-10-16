@@ -179,3 +179,61 @@ function show_pending_number( $menu ) {
     }
     return $menu;
 }
+
+// Hide all image uploads from media gallery
+// http://wordpress.stackexchange.com/questions/231165/how-to-hide-cpt-files-from-media-library-programmatically
+function create_hidden_taxonomy() {
+    register_taxonomy(
+        'hidden_taxonomy',
+        'attachment',
+        array(
+            'label' => __( 'Hidden Attachment Taxonomy' ),
+            'public' => false, // it's hidden!
+            'rewrite' => false,
+            'hierarchical' => false,
+        )
+    );
+}
+add_action( 'init', 'create_hidden_taxonomy' );
+
+function tomjn_add_term( $post_id, \WP_Post $p, $update ) {
+
+    if ( 'attachment' !== $p->post_type ) {
+        return;
+    }
+    if ( wp_is_post_revision( $post_id ) ) {
+        return;
+    }
+    if ( $post->post_parent ) {
+        $excluded_types = array( 'colouring_submission' );
+        if ( in_array( get_post_type( $p->post_parent ), $excluded_types ) ) {
+            return;
+        }
+    }
+    $result = wp_set_object_terms( $post_id, 'show_in_media_library', 'hidden_taxonomy', false );
+    if ( !is_array( $result ) || is_wp_error( $result ) ) {
+        wp_die( "Error setting up terms") ;
+    }
+}
+add_action( 'save_post', 'tomjn_add_term', 10, 2 );
+
+add_action( 'pre_get_posts' , 'assets_hide_media' );
+
+/**
+ * Only show attachments tagged as show_in_media_library
+ **/
+function assets_hide_media( \WP_Query $query ){
+    if ( !is_admin() ) {
+        return;
+    }
+    global $pagenow;
+    if ( 'upload.php' != $pagenow && 'media-upload.php' != $pagenow ) {
+        return;
+    }
+
+    if ( $query->is_main_query() ) {
+        $query->set('hidden_taxonomy', 'show_in_media_library' );
+    }
+
+    return $query;
+}
