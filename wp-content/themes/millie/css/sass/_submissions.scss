@@ -103,9 +103,16 @@
     margin: 0 12.5%;
     font-size: 1.25em;
     line-height: 1.5;
-    font-weight: bold;
     text-align: center;
-    padding: 1.5em 0;
+    padding: 1.5em .75em;
+  }
+
+  strong {
+    font-size: 1.5em;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    letter-spacing: .0625em;
+    margin-bottom: .375em;
   }
 }
 
