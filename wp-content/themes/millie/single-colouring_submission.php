@@ -3,7 +3,7 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?>>
       <? $pageIndex = $_GET['pageIndex']
-       if ($$pageIndex) : ?>
+       if ($pageIndex) : ?>
         <span style="float:left;">&laquo;&nbsp;<a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>/page/<?= $pageIndex; ?>">Back to submissions</a></span>
       <? else : ?>
       <span style="float:left;">&laquo;&nbsp;<a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">Back to submissions</a></span>
