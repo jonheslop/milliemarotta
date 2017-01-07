@@ -1,3 +1,4 @@
+<? $currentPage = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('wrapper work-grid-item'); ?>>
   <figure>
       <? if ( get_post_type() == 'colouring_submission' ) : ?>
@@ -19,7 +20,7 @@
     <figcaption class="work-grid-item-title-wrap">
       <header>
       <? if ( get_post_type() == 'colouring_submission' ) : ?>
-        <a class="entry-link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+        <a class="entry-link" href="<?php the_permalink(); ?>?page=$currentPage" title="<?php the_title_attribute(); ?>" rel="bookmark">
       <?php else : ?>
         <a class="entry-link" href="<?php the_permalink(); ?>" title="<?php the_field('name'); ?>" rel="bookmark">
       <?php endif; ?>
