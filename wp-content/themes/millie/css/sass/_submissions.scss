@@ -96,7 +96,8 @@
 
 #message {
   text-align: center;
-  background-color: $green;
+  background-color: $offwhite;
+  border-radius: .25em;
 
   &.updated {
     margin: 0 12.5%;
