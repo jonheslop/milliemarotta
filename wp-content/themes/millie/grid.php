@@ -2,7 +2,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('wrapper work-grid-item'); ?>>
   <figure>
       <? if ( get_post_type() == 'colouring_submission' ) : ?>
-        <a class="entry-link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+        <a class="entry-link" href="<?php the_permalink(); ?>?page=<?= $currentPage; ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
       <?php else : ?>
         <a class="entry-link" href="<?php the_permalink(); ?>" title="<?php the_field('name'); ?>" rel="bookmark">
       <?php endif; ?>
@@ -22,7 +22,7 @@
       <? if ( get_post_type() == 'colouring_submission' ) : ?>
         <a class="entry-link" href="<?php the_permalink(); ?>?page=<?= $currentPage; ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
       <?php else : ?>
-        <a class="entry-link" href="<?php the_permalink(); ?>?page=<?= $currentPage; ?>" title="<?php the_field('name'); ?>" rel="bookmark">
+        <a class="entry-link" href="<?php the_permalink(); ?>" title="<?php the_field('name'); ?>" rel="bookmark">
       <?php endif; ?>
       <?php if ( get_post_type() != 'colouring_submission' ) : ?>
       <?php if ( is_singular() ) { echo '<h1 class="entry-title">'; } else { echo '<h2 class="entry-title">'; } ?><?php echo get_the_title(); ?><?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>
