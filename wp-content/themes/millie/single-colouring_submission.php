@@ -2,9 +2,14 @@
 <section id="content" role="main" class="container content-container">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?>>
+      <? $pageIndex = $_GET['pageIndex']
+       if ($$pageIndex) : ?>
+        <span style="float:left;">&laquo;&nbsp;<a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>/page/<?= $pageIndex; ?>">Back to submissions</a></span>
+      <? else : ?>
       <span style="float:left;">&laquo;&nbsp;<a href="<?php echo get_post_type_archive_link('colouring_submission'); ?>">Back to submissions</a></span>
+      <? endif; ?>
       <?php $categories = get_the_terms($post->ID,'colouring_book');
-      $category_id = $categories[0]->term_id; 
+      $category_id = $categories[0]->term_id;
       ?>
       <span style="float:right;"><a href="<?php echo get_term_link($category_id,'colouring_book'); ?>">View all in <?php echo $categories[0]->name; ?></a>&nbsp;&raquo;</span>
     <header class="wrapper work-header">
