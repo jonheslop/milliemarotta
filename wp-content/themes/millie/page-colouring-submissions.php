@@ -12,9 +12,10 @@
   </section>
 
   <?php
-  
+
   acf_form(array(
     'post_id' => 'new_post',
+    'honeypot' => true,
     'post_title' => true,
     'featured_image' => true,
     'new_post' => array(
@@ -25,7 +26,7 @@
     'submit_value' => __('Submit', 'acf'),
     'updated_message' => __('Thanks! Your submission will be reviewed before it is published. Please check back again later to see it in the gallery.', 'acf')
   ));
-  
+
   acf_enqueue_uploader();
   ?>
 </article>

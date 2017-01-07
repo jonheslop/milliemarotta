@@ -2,7 +2,7 @@
   float: left;
   text-align: center;
   width: 100%;
-  
+
   @include breakpoint($tablet-landscape) {
     margin: 0 25%;
     width: 50%;
@@ -96,9 +96,15 @@
 
 #message {
   text-align: center;
+  background-color: $green;
 
   &.updated {
-    color: $green;
+    margin: 0 12.5%;
+    font-size: 1.25em;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.5em 0;
   }
 }
 
