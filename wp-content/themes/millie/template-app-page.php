@@ -17,6 +17,16 @@ get_header(); ?>
                 </figure>
             </section>
         <? endif; ?>
+        <section class="entry-content cf">
+            <video class="video-js" controls preload="auto" width="720" height="540" poster="" data-setup="{}">
+              <source src="http://milliemarotta.co.uk/wp-content/uploads/2017/06/mmca.mp4" type='video/mp4'>
+              <source src="http://milliemarotta.co.uk/wp-content/uploads/2017/06/mmca.webm" type='video/webm'>
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+              </p>
+            </video>
+        </section>
         <section class="entry-content">
             <?php the_content(); ?>
             <div class="cf app-button-wrap">

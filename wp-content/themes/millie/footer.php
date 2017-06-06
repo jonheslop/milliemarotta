@@ -27,6 +27,9 @@
   <?php if ( is_front_page() ) : ?>
     <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/jquery.slick.min.js"></script>
   <?php endif; ?>
+  <?php if (is_page_template('template-app-page.php')) : ?>
+      <script src="http://vjs.zencdn.net/5.19.2/video.js"></script>
+  <?php endif; ?>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
