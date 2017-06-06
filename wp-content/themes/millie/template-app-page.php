@@ -28,7 +28,7 @@ get_header(); ?>
         </section>
         <?php if ( has_post_thumbnail() ) : ?>
             <section class="entry-content cf">
-                <figure class="wrapper page-image">
+                <figure class="wrapper">
                     <?php the_post_thumbnail('laptop'); ?>
                 </figure>
             </section>
@@ -37,7 +37,7 @@ get_header(); ?>
         $images = get_attached_media('image', $post->ID);
         foreach($images as $image) { ?>
             <section class="entry-content cf">
-                <figure class="wrapper page-image">
+                <figure class="wrapper">
                     <img src="<?php echo wp_get_attachment_image_src($image->ID,'laptop')[0]; ?>" />
                 </figure>
             </section>
