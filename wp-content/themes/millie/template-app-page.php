@@ -19,7 +19,9 @@ get_header(); ?>
         <? endif; ?>
         <section class="entry-content">
             <?php the_content(); ?>
-            <a href="https://itunes.apple.com/us/app/id1064432319" title="Download Millie Marotta's Coloring Adventures"><img src="<?php echo get_template_directory_uri(); ?>/img/app-store-badge.svg" alt="Millie Marotta's Coloring Adventures"></a>
+            <div class="cf app-button-wrap">
+                <a href="https://itunes.apple.com/us/app/id1064432319" title="Download Millie Marotta's Coloring Adventures"><img class="app-button" src="<?php echo get_template_directory_uri(); ?>/img/app-store-badge.svg" alt="Millie Marotta's Coloring Adventures"></a>
+            </div>
         </section>
     </article>
 </section>
