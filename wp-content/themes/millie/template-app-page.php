@@ -18,7 +18,7 @@ get_header(); ?>
             </section>
         <? endif; ?>
         <section class="entry-content cf">
-            <video class="video-js" controls preload="auto" width="720" height="540" poster="http://milliemarotta.co.uk/wp-content/uploads/2017/06/mmca-poster.jpg" data-setup="{}">
+            <video class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="720" height="540" poster="http://milliemarotta.co.uk/wp-content/uploads/2017/06/mmca-poster.jpg" data-setup="{}">
               <source src="http://milliemarotta.co.uk/wp-content/uploads/2017/06/mmca.mp4" type='video/mp4'>
               <source src="http://milliemarotta.co.uk/wp-content/uploads/2017/06/mmca.webm" type='video/webm'>
               <p class="vjs-no-js">
