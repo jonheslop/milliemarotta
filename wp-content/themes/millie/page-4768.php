@@ -14,7 +14,7 @@
         <? endif; ?>
         <section class="entry-content">
             <?php the_content(); ?>
-            <a href="https://itunes.apple.com/us/app/id1064432319" title="Downlaod Millie Marotta's Coloring Adventures"><img src="<?php echo get_template_directory_uri(); ?>/img/app-store-badge.svg" alt="Millie Marotta's Coloring Adventures"></a>
+            <a href="https://itunes.apple.com/us/app/id1064432319" title="Download Millie Marotta's Coloring Adventures"><img src="<?php echo get_template_directory_uri(); ?>/img/app-store-badge.svg" alt="Millie Marotta's Coloring Adventures"></a>
         </section>
     </article>
 </section>
