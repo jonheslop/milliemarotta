@@ -10,13 +10,6 @@ get_header(); ?>
         <header class="header">
             <h1 class="entry-title"><?php the_title(); ?></h1>
         </header>
-        <?php if ( has_post_thumbnail() ) : ?>
-            <section class="entry-content cf">
-                <figure class="wrapper page-image">
-                    <?php the_post_thumbnail('large'); ?>
-                </figure>
-            </section>
-        <? endif; ?>
         <section class="entry-content cf">
             <video class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="720" height="540" poster="http://milliemarotta.co.uk/wp-content/uploads/2017/06/mmca-poster.jpg" data-setup="{}">
               <source src="http://milliemarotta.co.uk/wp-content/uploads/2017/06/mmca.mp4" type='video/mp4'>
@@ -33,6 +26,13 @@ get_header(); ?>
                 <a href="https://itunes.apple.com/us/app/id1064432319" title="Download Millie Marotta's Coloring Adventures"><img class="app-button" src="<?php echo get_template_directory_uri(); ?>/img/app-store-badge.svg" alt="Millie Marotta's Coloring Adventures"></a>
             </div>
         </section>
+        <?php if ( has_post_thumbnail() ) : ?>
+            <section class="entry-content cf">
+                <figure class="wrapper page-image">
+                    <?php the_post_thumbnail('large'); ?>
+                </figure>
+            </section>
+        <? endif; ?>
     </article>
 </section>
 <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
