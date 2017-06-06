@@ -33,6 +33,15 @@ get_header(); ?>
                 </figure>
             </section>
         <? endif; ?>
+        <?php
+        $images = get_attached_media('image', $post->ID);
+        foreach($images as $image) { ?>
+            <section class="entry-content cf">
+                <figure class="wrapper page-image">
+                    <img src="<?php echo wp_get_attachment_image_src($image->ID,'large'); ?>" />
+                </figure>
+            </section>
+        <?php } ?>
     </article>
 </section>
 <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
