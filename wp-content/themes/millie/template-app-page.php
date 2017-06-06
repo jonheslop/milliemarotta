@@ -11,7 +11,7 @@ get_header(); ?>
             <h1 class="entry-title"><?php the_title(); ?></h1>
         </header>
         <section class="entry-content cf">
-            <video class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="720" height="540" poster="http://milliemarotta.co.uk/wp-content/uploads/2017/06/mmca-poster.jpg" data-setup="{}">
+            <video class="video-js vjs-default-skin vjs-big-play-centered vjs-4-3" controls preload="auto" width="720" height="540" poster="http://milliemarotta.co.uk/wp-content/uploads/2017/06/mmca-poster.jpg" data-setup="{"fluid": true}">
               <source src="http://milliemarotta.co.uk/wp-content/uploads/2017/06/mmca.mp4" type='video/mp4'>
               <source src="http://milliemarotta.co.uk/wp-content/uploads/2017/06/mmca.webm" type='video/webm'>
               <p class="vjs-no-js">
