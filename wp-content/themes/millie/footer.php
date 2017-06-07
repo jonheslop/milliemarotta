@@ -1,4 +1,10 @@
   <footer role="content-info" class="container cf">
+    <div class="cf app-button-wrap">
+        <a href="https://itunes.apple.com/us/app/id1064432319" title="Download Millie Marotta's Coloring Adventures"><img class="app-button" src="<?php echo get_template_directory_uri(); ?>/img/app-store-badge.svg" alt="Millie Marotta's Coloring Adventures"></a>
+    </div>
+    <div id="copyright">
+  		<?php echo sprintf( __( '%1$s %2$s %3$s. All Rights Reserved.', 'blankslate' ), '&copy;', date( 'Y' ), esc_html( get_bloginfo( 'name' ) ) ); ?>
+  	</div>
     <aside class="social-icons">
         <a class="social-icon-link" href="http://www.facebook.com/milliemarotta"><svg class="social-icon social-icon_facebook" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 266.893 266.895" enable-background="new 0 0 266.893 266.895">
             <title>Facebook Icon</title>
@@ -19,12 +25,6 @@
             </g>
         </svg></a>
     </aside>
-    <div class="cf app-button-wrap">
-        <a href="https://itunes.apple.com/us/app/id1064432319" title="Download Millie Marotta's Coloring Adventures"><img class="app-button" src="<?php echo get_template_directory_uri(); ?>/img/app-store-badge.svg" alt="Millie Marotta's Coloring Adventures"></a>
-    </div>
-    <div id="copyright">
-  		<?php echo sprintf( __( '%1$s %2$s %3$s. All Rights Reserved.', 'blankslate' ), '&copy;', date( 'Y' ), esc_html( get_bloginfo( 'name' ) ) ); ?>
-  	</div>
   </footer>
   <?php wp_footer(); ?>
   <?php if ( is_front_page() ) : ?>

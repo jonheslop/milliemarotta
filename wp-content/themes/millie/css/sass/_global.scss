@@ -42,7 +42,7 @@ header[role="banner"] { position: relative; z-index: 100; }
 }
 
 .quote { font-style: italic; color: $grey; margin: 0;
-	// border-left: .125em solid $lightgrey; 
+	// border-left: .125em solid $lightgrey;
 	// p:first-letter { margin-left: -.25em; }
 	&_big {
 		p { font-size: 1.25em; line-height: 1.2; }
@@ -93,3 +93,8 @@ header[role="banner"] { position: relative; z-index: 100; }
 .pad-right { margin-right: 1em; }
 
 footer[role="content-info"] { text-align: center; margin-top: 2em; margin-bottom: 2em; color: $grey; }
+
+.copyright {
+    margin-top: 1.5;
+    font-size: .875rem;
+}
