@@ -15,10 +15,20 @@
     &.millie_creature {
       width: 16.666666667%;
     }
+
+    &.category-books {
+        width: 33.333333333%;
+
+        &:nth-child(-n+2) {
+            width: 50%;
+        }
+    }
+
   }
   a:hover {
     text-decoration: none;
   }
+
 }
 
 .work-grid-item-title-wrap {
