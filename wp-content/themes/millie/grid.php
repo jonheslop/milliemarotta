@@ -9,7 +9,7 @@
       <?php if ( has_post_thumbnail() && get_post_type() == 'millie_creature' ) {
         the_post_thumbnail('smaller-crop');
       } elseif ( has_post_thumbnail() ) {
-        the_post_thumbnail('small-crop');
+        the_post_thumbnail('grande-crop');
       } elseif ( get_post_type() == 'colouring_submission' ) {
         $image = get_field('image');
         if ( !empty($image) ) {
