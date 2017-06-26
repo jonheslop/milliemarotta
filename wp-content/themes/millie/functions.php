@@ -52,7 +52,7 @@ function blankslate_custom_pings( $comment )
 $GLOBALS['comment'] = $comment;
 ?>
 <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo comment_author_link(); ?></li>
-<?php 
+<?php
 }
 add_filter( 'get_comments_number', 'blankslate_comments_number' );
 function blankslate_comments_number( $count )
@@ -79,11 +79,12 @@ return $count;
 	// Add featured images to posts and pages
 	add_theme_support( 'post-thumbnails', array('post') );
 	set_post_thumbnail_size( 80, 80, true ); // default Post Thumbnail dimensions (cropped)
-	if ( function_exists( 'add_image_size' ) ) { 
+	if ( function_exists( 'add_image_size' ) ) {
     add_image_size('cinema', 2048, 9999);
     add_image_size('desktop', 1600, 9999);
     add_image_size('laptop', 1200, 9999);
     add_image_size('grande', 768, 9999);
+    add_image_size('grande-crop', 768, 768, true);
     add_image_size('small', 512, 9999);
     add_image_size('small-crop', 512, 512, true);
 		add_image_size('smaller', 256, 9999);
