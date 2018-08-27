@@ -68,9 +68,11 @@
   margin: 1.5em 0 3em;
   text-align: left;
   width: 100%;
+  line-height: 2;
 
   strong {
     float: left;
+    margin-right: .75em;
   }
 
   @include breakpoint($tablet-landscape) {
@@ -79,7 +81,6 @@
 
   a {
     margin-right: .75em;
-    line-height: 2;
     float: left;
     display: block;
   }
