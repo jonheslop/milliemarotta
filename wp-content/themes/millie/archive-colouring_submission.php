@@ -23,7 +23,7 @@ elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'blankslate' ), get_th
         <a href="/" class="current">All</a>
       <?php $categoriesCount = count($categories);
       foreach ($categories as $category ) : ?>
-        <a href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo widont($category->name;) ?></a>
+        <a href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a>
       <?php endforeach; ?>
     </p>
     <div class="wrapper colouring-button-wrap">

@@ -20,9 +20,9 @@
       <?php $categoriesCount = count($categories);
       foreach ($categories as $category ) : ?>
         <?php if ($currentTaxTerm == $category->term_id) : ?>
-        <a class="current" href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo widont($category->name); ?></a>
+        <a class="current" href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a>
         <?php else : ?>
-        <a href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo widont($category->name); ?></a>
+        <a href="<?php echo get_term_link($category->slug, 'colouring_book') ?>"><?php echo $category->name; ?></a>
         <?php endif; ?>
       <?php endforeach; ?>
     </p>
