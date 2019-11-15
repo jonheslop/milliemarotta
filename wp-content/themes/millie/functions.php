@@ -216,7 +216,7 @@ function tomjn_add_term( $post_id, \WP_Post $p, $update ) {
         wp_die( "Error setting up terms") ;
     }
 }
-add_action( 'save_post', 'tomjn_add_term', 10, 2 );
+// add_action( 'save_post', 'tomjn_add_term', 10, 2 );
 
 add_action( 'pre_get_posts' , 'assets_hide_media' );
 
