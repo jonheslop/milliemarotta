@@ -61,3 +61,16 @@
   margin: 0 12.5%;
   width: 75%;
 }
+
+details {
+  margin-top: .75em 0;
+}
+
+summary {
+   font-size: 1.125em;
+   cursor: pointer;
+
+   &:focus {
+    outline: none;
+   }
+}
