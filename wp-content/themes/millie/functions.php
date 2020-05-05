@@ -246,7 +246,7 @@ function create_media_taxonomy() {
         array(
             'label' => __( 'Categories' ),
             'public' => true, // it's hidden!
-            'rewrite' => false,
+            'rewrite' => true,
             'hierarchical' => false,
         )
     );
