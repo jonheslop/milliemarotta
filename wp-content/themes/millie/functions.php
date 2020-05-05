@@ -244,7 +244,7 @@ function create_media_taxonomy() {
         'media_category',
         'attachment',
         array(
-            'label' => __( 'Media Category' ),
+            'label' => __( 'Categories' ),
             'public' => true, // it's hidden!
             'rewrite' => false,
             'hierarchical' => false,
