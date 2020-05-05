@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <section id="content" role="main" class="container content-container">
-<header class="header all-work-header">
+<header class="header all-work-header category">
 <h1 class="entry-title"><?php single_cat_title(); ?></h1>
 <?php if ( '' != category_description() ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . category_description() . '</div>' ); ?>
 <?php 
