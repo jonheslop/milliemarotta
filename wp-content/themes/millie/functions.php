@@ -238,3 +238,17 @@ function assets_hide_media( \WP_Query $query ){
 
     return $query;
 }
+
+function create_media_taxonomy() {
+    register_taxonomy(
+        'media_category',
+        'attachment',
+        array(
+            'label' => __( 'Media Categoru' ),
+            'public' => true, // it's hidden!
+            'rewrite' => false,
+            'hierarchical' => false,
+        )
+    );
+}
+add_action( 'init', 'create_media_taxonomy' );
