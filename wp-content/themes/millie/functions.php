@@ -239,16 +239,8 @@ function assets_hide_media( \WP_Query $query ){
     return $query;
 }
 
-function create_media_taxonomy() {
-    register_taxonomy(
-        'media_category',
-        'attachment',
-        array(
-            'label' => __( 'Categories' ),
-            'public' => true, // it's hidden!
-            'rewrite' => true,
-            'hierarchical' => false,
-        )
-    );
+// Add categories to attachments
+function mm_add_categories_to_attachments() {
+      register_taxonomy_for_object_type( 'category', 'attachment' );
 }
-add_action( 'init', 'create_media_taxonomy' );
+add_action( 'init' , 'mm_add_categories_to_attachments' ); 
