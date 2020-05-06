@@ -4,7 +4,7 @@
 <?php $allDownloadsArgs = array(
     'post_type' => 'attachment',
     'posts_per_page' => -1,
-    'category_name' => 'downloads',
+    'cat' => 20,
   );
   $allDownloads = new WP_Query( $allDownloadsArgs ); 
   if ( $allDownloads->have_posts() ) : ?>
