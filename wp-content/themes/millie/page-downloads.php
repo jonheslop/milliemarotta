@@ -4,13 +4,16 @@
   <h1 class="entry-title"><?php single_cat_title(); ?></h1>
   <?php if ( '' != category_description() ) echo apply_filters( 'archive_meta', '<div class="entry-content">' . category_description() . '</div>' ); ?>
 </header>
-<? $args = array(
+
+<?php $allDownloadsArgs = array(
     'posts_per_page'   => -1,
     'post_type'        => 'attachment',
     'category_name'        => 'downloads',
-);
-$downloads = new WP_Query( $args ); ?>
-<?php if ( $downloads =>have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  );
+  $allDownloads = new WP_Query( $allDownloadsArgs ); 
+  if ( $allDownloads->have_posts() ) : ?>
+
+<?php if ( $allDownloads->have_posts() ) : while ( $allDownloads->have_posts() ) : $allDownloads->the_post(); ?>
 <?php get_template_part( 'grid' ); ?>
 <?php endwhile; endif; ?>
 <?php get_template_part( 'nav', 'below' ); ?>
