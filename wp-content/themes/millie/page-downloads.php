@@ -8,10 +8,14 @@
   );
   $allDownloads = new WP_Query( $allDownloadsArgs ); 
   if ( $allDownloads->have_posts() ) : ?>
+    <header class="header all-work-header">
+      <h1 class="entry-title">More <?php echo $current_post_category[0]->name; ?></h1>
+    </header>
+      <?php while ( $allDownloads->have_posts() ) : $allDownloads->the_post(); ?>
+        <?php get_template_part( 'grid' ); ?>
+  <?php endwhile; endif; ?>
 
-<?php if ( $allDownloads->have_posts() ) : while ( $allDownloads->have_posts() ) : $allDownloads->the_post(); ?>
 <?php // get_template_part( 'grid' ); ?>
-<?php endwhile; endif; ?>
 <?php // get_template_part( 'nav', 'below' ); ?>
 </section>
 <?php get_footer(); ?>
