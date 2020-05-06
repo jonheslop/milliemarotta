@@ -80,8 +80,5 @@
     <?php else : ?>
       No downloads
   <?php endif; ?>
-
-<?php // get_template_part( 'grid' ); ?>
-<?php // get_template_part( 'nav', 'below' ); ?>
 </section>
 <?php get_footer(); ?>
