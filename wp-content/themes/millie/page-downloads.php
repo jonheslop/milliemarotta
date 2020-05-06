@@ -2,7 +2,7 @@
 <section id="content" role="main" class="container content-container">
 
 <?php $allDownloadsArgs = array(
-    'post_type' => array('attachment'),
+    'post_type' => 'attachment',
     'posts_per_page' => -1,
     'category_name' => 'downloads',
   );
@@ -17,7 +17,10 @@
       <?php else : ?>
         <a href="<?php echo wp_get_attachment_url( $post->ID ); ?>" title="<?php echo esc_html( get_the_title( $post->ID ), 1 ); ?>" rel="attachment"><?php echo basename( $post->guid ); ?></a>
       <?php endif; ?>
-    <?php endwhile; endif; ?>
+    <?php endwhile; ?>
+    <?php else : ?>
+      No downloads
+  <?php endif; ?>
 
 <?php // get_template_part( 'grid' ); ?>
 <?php // get_template_part( 'nav', 'below' ); ?>
