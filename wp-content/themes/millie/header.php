@@ -19,10 +19,12 @@
     <header id="header" role="banner" class="container cf">
         <h1 class="wrapper" id="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/img/millie-marotta.png" alt="Millie Marotta" title="Millie Marotta"></a></h1>
 
+    <?php if (!is_page(11492)) : ?>
         <nav id="menu" role="navigation">
             <?php wp_nav_menu( array(
             'theme_location' => 'main-menu',
             'menu_class' => 'wrapper'
             ) ); ?>
         </nav>
+    <?php endif ?>
     </header>
