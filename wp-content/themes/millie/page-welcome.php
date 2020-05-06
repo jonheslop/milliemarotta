@@ -9,7 +9,15 @@
     display: block;
     padding: 1rem;
     border: 1px dashed;
+    text-align: center;
+    max-width: 32rem;
+    margin: 0 auto;
+    font-size: 1.25rem;
   }
+
+.entry-content a:link, .entry-content a:visited {
+  color: #000;
+}
 </style>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
