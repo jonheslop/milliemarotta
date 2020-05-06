@@ -65,11 +65,11 @@
     <header class="header all-work-header">
       <h1 class="entry-title">Downloads</h1>
     </header>
-    <div class="g2x g4x-l">
+    <div class="g2x g4x-l gg2">
     <?php while ( $allDownloads->have_posts() ) : $allDownloads->the_post(); ?>
-      <div class="">
+      <div class="flex flex-column">
+        <h4 class="tc" style="margin-bottom: auto;"><?php the_title() ?></h4>
         <img class="w-100 db mb4" src="<?php echo wp_get_attachment_image_src( $post->ID, "grande" )[0] ?>" alt="<?php the_title() ?> -<?php $post->post_excerpt; ?>" />
-        <h4><?php the_title() ?></h4>
       </div>
     <?php endwhile; ?>
     </div>
