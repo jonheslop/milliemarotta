@@ -10,6 +10,10 @@
     text-align: center;
   }
 
+.entry-content p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 .entry-content a {
     display: block;
     padding: 1rem;
