@@ -2,7 +2,7 @@
 <section id="content" role="main" class="container content-container">
 
 <?php $allDownloadsArgs = array(
-    'post_type' => array('millie_work'),
+    'post_type' => array('attachment'),
     'posts_per_page' => -1,
     'category_name' => 'downloads',
   );
