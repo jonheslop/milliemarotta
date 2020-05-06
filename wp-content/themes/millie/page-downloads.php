@@ -6,6 +6,7 @@
     'posts_per_page' => -1,
     'post_status' => 'any',
     'post_parent' => null,
+    'cat' => 20,
   );
   $allDownloads = new WP_Query( $allDownloadsArgs ); 
   if ( $allDownloads->have_posts() ) : ?>
