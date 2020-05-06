@@ -20,9 +20,9 @@
       <div class="fl w-100 w-50-m w-25-l">
         <img class="w-100 db mb4" src="<?php echo wp_get_attachment_image_src( $post->ID, "grande" )[0] ?>" alt="<?php the_title() ?> -<?php $post->post_excerpt; ?>" />
         <h4><?php the_title() ?></h4>
-        </div>
       </div>
     <?php endwhile; ?>
+    </div>
     <?php else : ?>
       No downloads
   <?php endif; ?>
