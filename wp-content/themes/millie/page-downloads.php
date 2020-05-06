@@ -68,8 +68,10 @@
     <div class="g2x g4x-l gg2">
     <?php while ( $allDownloads->have_posts() ) : $allDownloads->the_post(); ?>
       <div class="flex flex-column">
-        <h4 class="tc" style="margin-bottom: auto;"><?php the_title() ?></h4>
-        <img class="w-100 db mb4" src="<?php echo wp_get_attachment_image_src( $post->ID, "grande" )[0] ?>" alt="<?php the_title() ?> -<?php $post->post_excerpt; ?>" />
+        <h4 class="tc pb3" style="margin-bottom: auto;"><?php the_title() ?></h4>
+        <a class="db link grow" href="<?php echo wp_get_attachment_url( $post->ID ); ?>" rel="attachment">
+          <img class="w-100 db mb4" src="<?php echo wp_get_attachment_image_src( $post->ID, "grande" )[0] ?>" alt="<?php the_title() ?> -<?php $post->post_excerpt; ?>" />
+        </a>
       </div>
     <?php endwhile; ?>
     </div>
