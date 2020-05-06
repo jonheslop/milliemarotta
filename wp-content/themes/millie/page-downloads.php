@@ -18,7 +18,7 @@
         <p class="attachment"><a href="<?php echo wp_get_attachment_url( $post->ID ); ?>" title="<?php the_title(); ?>" rel="attachment"><img src="<?php echo $att_image[0]; ?>" width="<?php echo $att_image[1]; ?>" height="<?php echo $att_image[2]; ?>" class="attachment-medium" alt="<?php $post->post_excerpt; ?>" /></a></p>
       <?php else : ?>
         <a href="<?php echo wp_get_attachment_url( $post->ID ); ?>" title="<?php echo esc_html( get_the_title( $post->ID ), 1 ); ?>" rel="attachment"><?php echo basename( $post->guid ); ?></a>
-        image: <?php wp_get_attachment_image_src( $post->ID, "large" ) ?>
+        image: <?php wp_get_attachment_thumb_url( $post->ID ) ?>
       <?php endif; ?>
     <?php endwhile; ?>
     <?php else : ?>
