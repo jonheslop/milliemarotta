@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<link href="https://unpkg.com/tachyons@4.10.0/css/tachyons.css" rel="stylesheet">
+
 <section id="content" role="main" class="container content-container">
 
 <?php $allDownloadsArgs = array(
@@ -13,13 +15,13 @@
     <header class="header all-work-header">
       <h1 class="entry-title">Downloads</h1>
     </header>
+    <div class="cf">
     <?php while ( $allDownloads->have_posts() ) : $allDownloads->the_post(); ?>
-      <?php if ( wp_attachment_is_image( $post->ID ) ) : $att_image = wp_get_attachment_image_src( $post->ID, "large" ); ?>
-        <p class="attachment"><a href="<?php echo wp_get_attachment_url( $post->ID ); ?>" title="<?php the_title(); ?>" rel="attachment"><img src="<?php echo $att_image[0]; ?>" width="<?php echo $att_image[1]; ?>" height="<?php echo $att_image[2]; ?>" class="attachment-medium" alt="<?php $post->post_excerpt; ?>" /></a></p>
-      <?php else : ?>
-        <a href="<?php echo wp_get_attachment_url( $post->ID ); ?>" title="<?php echo esc_html( get_the_title( $post->ID ), 1 ); ?>" rel="attachment"><?php echo basename( $post->guid ); ?></a>
-        image: <img src="<?php echo wp_get_attachment_image_src( $post->ID, "large" )[0] ?>" />
-      <?php endif; ?>
+      <div class="fl w-100 w-50-m w-25-l">
+        <img class="w-100 db mb4" src="<?php echo wp_get_attachment_image_src( $post->ID, "grande" )[0] ?>" alt="<?php the_title() ?> -<?php $post->post_excerpt; ?>" />
+        <h4><?php the_title() ?></h4>
+        </div>
+      </div>
     <?php endwhile; ?>
     <?php else : ?>
       No downloads
