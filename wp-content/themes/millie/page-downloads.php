@@ -63,8 +63,8 @@
   $allDownloads = new WP_Query( $allDownloadsArgs ); 
   if ( $allDownloads->have_posts() ) : ?>
     <header class="header all-work-header">
-      <h1 class="entry-title f3">Downloads</h1>
-      <div class="f4 center measure tc">
+      <h1 class="entry-title">Downloads</h1>
+      <div class="mt3 center measure tc">
         <?php echo category_description(20); ?>
     </header>
     <div class="g2x g4x-l gg2">
