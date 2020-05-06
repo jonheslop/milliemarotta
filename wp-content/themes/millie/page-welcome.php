@@ -1,6 +1,11 @@
 <?php get_header(); ?>
 <section id="content" role="main" class="container content-container">
 <style type="text/css">
+  #logo {
+    float: none;
+    margin: 1em auto;
+  }
+
   .entry-content {
     text-align: center;
   }
