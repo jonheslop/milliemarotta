@@ -4,6 +4,8 @@
 <?php $allDownloadsArgs = array(
     'post_type' => 'attachment',
     'posts_per_page' => -1,
+    'post_status' => 'any',
+    'post_parent' => null,
   );
   $allDownloads = new WP_Query( $allDownloadsArgs ); 
   if ( $allDownloads->have_posts() ) : ?>
