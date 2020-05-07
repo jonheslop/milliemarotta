@@ -76,7 +76,7 @@ else { _e( 'Archives', 'blankslate' ); }
       Downloads
     </h1>
   </header>
-  <section class="entry-content">
+  <section class="entry-content measure center">
     <p>Pens and pencils at the ready, this is where you can find a collection of creative resources that you can access for free. If something here tickles your fancy simply click on the image to download it and get creative. And if you’d like to share your creation with the world, post a picture on social media using #MillieMarotta or upload it to my Colouring Gallery. I can’t wait to see what you create!</p>
   </section>
 <?php endif; ?>
