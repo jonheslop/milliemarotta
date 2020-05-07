@@ -106,6 +106,7 @@ add_filter( 'max_srcset_image_width', 'remove_max_srcset_image_width' );
   require_once('post_types/work.php');
   require_once('post_types/creature.php');
   require_once('post_types/colouring_submission.php');
+  require_once('post_types/downloads.php');
 
 function namespace_add_custom_types( $query ) {
   if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
