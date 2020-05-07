@@ -35,7 +35,6 @@ function register_downloads_post_type() {
     'description'           => __( 'Downloads', 'text_domain' ),
     'labels'                => $labels,
     'supports'              => array( 'title', 'thumbnail', 'revisions', 'custom-fields' ),
-    'taxonomies'            => array( 'category', 'post_tag' ),
     'hierarchical'          => false,
     'rewrite' => array('slug' => 'downloads', 'with_front' => true),
     'public'                => true,
