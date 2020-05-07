@@ -72,7 +72,7 @@
       <div class="flex flex-column">
         <h4 class="tc pb3 ttu" style="margin-bottom: auto;"><?php the_title() ?></h4>
         <a class="db link grow" href="<?php echo wp_get_attachment_url( $post->ID ); ?>" rel="attachment">
-          <img class="w-100 db mb4" src="<?php echo wp_get_attachment_image_src( $post->ID, "grande-crop" )[0] ?>" alt="<?php the_title() ?> -<?php $post->post_excerpt; ?>" />
+          <img class="w-100 db mb4" src="<?php echo wp_get_attachment_image_src( $post->ID, "large" )[0] ?>" alt="<?php the_title() ?> -<?php $post->post_excerpt; ?>" />
         </a>
         <h4 class="tc pb3 ma0 bb b--silver" style="margin-top: auto;"><?php echo wp_get_attachment_caption() ?></h4>
       </div>
