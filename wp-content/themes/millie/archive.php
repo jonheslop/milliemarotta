@@ -89,7 +89,7 @@ else { _e( 'Archives', 'blankslate' ); }
       <a class="db link grow" href="<?php the_field('download'); ?>" rel="attachment">
         <?php if (has_post_thumbnail()) : ?>
           <?php the_post_thumbnail('grande', array('class' => 'w-100 h-auto db')) ?>
-        <?php endif : ?>
+        <?php endif; ?>
       </a>
     </div>
   <?php endwhile; ?>
