@@ -85,7 +85,7 @@ else { _e( 'Archives', 'blankslate' ); }
   <?php while ( have_posts() ) : the_post(); ?>
     <div class="flex flex-column">
       <h4 class="tc ttu mb0"><?php the_title() ?></h4>
-      <h4 class="tc pb3 ma0 silver" style="margin-bottom: auto;"><? the_field('book_title'); ?></h4>
+      <h4 class="tc pb3 ma0 fw4 silver" style="margin-bottom: auto;"><? the_field('book_title'); ?></h4>
       <a class="db link grow" href="<?php the_field('download'); ?>" rel="attachment">
         <?php if (has_post_thumbnail()) : ?>
           <?php the_post_thumbnail('grande', array('class' => 'w-100 h-auto db')) ?>
