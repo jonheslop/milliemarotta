@@ -5,9 +5,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.g4x {
+.g3x {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .gg1 {
   grid-gap: 1rem;
@@ -21,9 +21,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .g4x-m {
+  .g3x-m {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .gg1-m {
     grid-gap: 1rem;
@@ -38,9 +38,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .g4x-l {
+  .g3x-l {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .gg1-l {
     grid-gap: 1rem;
@@ -67,7 +67,7 @@
       <div class="mt3 center measure tc">
         <?php echo category_description(20); ?>
     </header>
-    <div class="g2x g4x-l gg2">
+    <div class="g2x g3x-l gg2">
     <?php while ( $allDownloads->have_posts() ) : $allDownloads->the_post(); ?>
       <div class="flex flex-column">
         <h4 class="tc pb3" style="margin-bottom: auto;"><?php the_title() ?></h4>
