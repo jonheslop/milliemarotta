@@ -13,6 +13,7 @@
 .entry-content p {
   margin-left: 1rem;
   margin-right: 1rem;
+  text-align: center!important;
 }
 .entry-content a {
     display: block;
