@@ -91,7 +91,7 @@ else { _e( 'Archives', 'blankslate' ); }
           <?php the_post_thumbnail('grande', array('class' => 'w-100 h-auto db')) ?>
         <?php endif; ?>
       </a>
-      <h4 class="tc pb3 ma0 silver" style="margin-bottom: auto;"><? print_r(get_the_field('book')); ?></h4>
+      <h4 class="tc pb3 ma0 silver" style="margin-bottom: auto;"><? print_r(get_field('book')); ?></h4>
     </div>
   <?php endwhile; ?>
   </div>
