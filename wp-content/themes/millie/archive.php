@@ -85,7 +85,7 @@ else { _e( 'Archives', 'blankslate' ); }
   </section>
 <?php endif; ?>
 <?php if ( have_posts() ) : ?>
-  <div class="g2x <?php get_post_type() == 'millie_creature' ? "g4x-l" : "g3x-l" ?>  gg2">
+  <div class="g2x <?php echo get_post_type() == 'millie_creature' ? "g4x-l" : "g3x-l" ?>  gg2">
   <?php while ( have_posts() ) : the_post(); ?>
     <div class="flex flex-column">
       <h4 class="tc ttu mb0"><?php the_title() ?></h4>
