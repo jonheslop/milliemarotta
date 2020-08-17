@@ -86,7 +86,11 @@ else { _e( 'Archives', 'blankslate' ); }
     <div class="flex flex-column">
       <h4 class="tc ttu mb0"><?php the_title() ?></h4>
       <h4 class="tc pb3 ma0 fw4 silver" style="margin-bottom: auto;"><? the_field('book_title'); ?></h4>
+      <?php if (get_post_type() == 'millie_creature') : ?>
+      <a class="db link grow" href="<?php the_permalink(); ?>" rel="attachment">
+      <?php else : ?>
       <a class="db link grow" href="<?php the_field('download'); ?>" rel="attachment">
+      <?php endif; ?>
         <?php if (has_post_thumbnail()) : ?>
           <?php the_post_thumbnail('grande', array('class' => 'w-100 h-auto db')) ?>
         <?php endif; ?>
