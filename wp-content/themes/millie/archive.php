@@ -19,7 +19,7 @@ else { _e( 'Archives', 'blankslate' ); }
     <p>Discover more about the animals you’ll find in Curious Creatures and why I find them so intriguing.</p>
   </section>
 <?php endif; ?>
-<?php if ( get_post_type() == 'millie_downloads' ) : ?>
+<?php if ( get_post_type() == 'millie_downloads' || get_post_type() == 'millie_creature' ) : ?>
 <link href="https://unpkg.com/tachyons@4.10.0/css/tachyons.css" rel="stylesheet">
 <style type="text/css">
 .g2x {
